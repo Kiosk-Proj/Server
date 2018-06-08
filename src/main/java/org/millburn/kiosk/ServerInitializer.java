@@ -1,10 +1,19 @@
 package org.millburn.kiosk;
 
-import java.sql.SQLException;
+import org.millburn.kiosk.logging.Logger;
+import org.millburn.kiosk.logging.LoggingHandler;
 
+/**
+ *
+ * @author Javier
+ */
 public class ServerInitializer {
-    public static void main(String... args) throws SQLException {
-        System.out.println("Normies reee");
-        throw new SQLException();
+    private static Logger logger = new Logger();
+
+    public static void main(String... args){
+        LoggingHandler.initialize();
+        logger.info("Initializing kiosk service...");
+
+
     }
 }
