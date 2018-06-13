@@ -13,7 +13,7 @@ public class ServerInitializer {
     public static void main(String... args){
         LoggingHandler.initialize();
         logger.info("Initializing kiosk service...");
-
-
+        Server.initialize();
+        Server.getCurrent().run();
     }
 }

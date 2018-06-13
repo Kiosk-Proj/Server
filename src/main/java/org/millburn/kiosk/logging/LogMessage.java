@@ -39,6 +39,15 @@ public class LogMessage {
     }
 
     public enum Priority {
-        SEVERE, WARNING, INFO, DEBUG
+        SEVERE, WARNING, INFO, DEBUG;
+
+        public int getPriorityNumber(){
+            switch(this){
+                case DEBUG: return 0;
+                case INFO: return 1;
+                case WARNING: return 2;
+                default: return 3;
+            }
+        }
     }
 }

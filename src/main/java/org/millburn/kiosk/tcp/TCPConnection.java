@@ -1,4 +1,4 @@
 package org.millburn.kiosk.tcp;
 
-public class Connection{
+public class TCPConnection{
 }

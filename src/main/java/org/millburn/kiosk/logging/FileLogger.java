@@ -11,6 +11,10 @@ import java.util.Arrays;
 
 public class FileLogger extends MessageHandler{
 
+    public FileLogger(LogMessage.Priority priority){
+        super(priority);
+    }
+
     @Override
     public void receive(LogMessage message) {
         var fname = message.getTime()

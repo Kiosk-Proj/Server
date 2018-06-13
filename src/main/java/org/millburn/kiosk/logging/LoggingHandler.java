@@ -7,14 +7,13 @@ public class LoggingHandler {
     private static List<MessageHandler> receivers = new ArrayList<>();
 
     public static void initialize(){
-        receivers.add(new FileLogger());
-        receivers.add(new ConsoleLogger());
+        receivers.add(new FileLogger(LogMessage.Priority.WARNING));
+        receivers.add(new ConsoleLogger(LogMessage.Priority.INFO));
     }
 
     public static void receive(LogMessage message){
         for(var receiver : receivers){
-            //if(receiver.getPriority() <= message.getPriority()) receiver.receive(message);
-            receiver.receive(message);
+            if(receiver.getPriority().getPriorityNumber() <= message.getPriority().getPriorityNumber()) receiver.receive(message);
         }
     }
 }

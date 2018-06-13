@@ -20,6 +20,7 @@ mainClassName = 'org.millburn.kiosk.ServerInitializer'
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:23.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'

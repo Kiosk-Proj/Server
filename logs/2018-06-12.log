@@ -1,0 +1,55 @@
+[Tue, 12 Jun 2018 11:46:32 -0400] INFO ServerInitializer: Initializing kiosk service...
+[Tue, 12 Jun 2018 11:48:50 -0400] INFO ServerInitializer: Initializing kiosk service...
+[Tue, 12 Jun 2018 11:48:50 -0400] INFO ProductionDatabase: Connecting to database //localhost:3306/test at jdbc:mysql: with username javster101
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:01:49 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:02:15 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:02:15 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:05:27 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:05:27 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:05:27 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:05:27 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:05:27 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:05:27 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE Database: Failed to register drivercom.mysql.jdbc.Driver
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:06:20 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE Database: Failed to register driver com.mysql.jdbc.Driver
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:08:55 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:09:01 -0400] SEVERE Database: Failed to register driver com.mysql.jdbc.Driver
+[Tue, 12 Jun 2018 12:09:01 -0400] SEVERE DatabaseConnectionThread: No suitable driver found for jdbc:mysql://localhost:3306/test
+[Tue, 12 Jun 2018 12:12:26 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:12:26 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:13:36 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:13:36 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:13:36 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:13:36 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:13:36 -0400] SEVERE DatabaseConnectionThread: Access denied for user 'javster101'@'localhost' (using password: YES)
+[Tue, 12 Jun 2018 12:16:00 -0400] SEVERE DatabaseConnectionThread: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
