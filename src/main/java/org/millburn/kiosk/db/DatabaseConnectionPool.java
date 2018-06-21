@@ -2,13 +2,13 @@ package org.millburn.kiosk.db;
 
 
 import org.millburn.kiosk.logging.Logger;
+import org.millburn.kiosk.util.Tuple;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class DatabaseConnectionPool{
@@ -58,7 +58,23 @@ public class DatabaseConnectionPool{
     public SQLFuture query(String command){
         DatabaseRequest request = new DatabaseRequest();
         request.value = command;
-        request.future = new SQLFuture();
+        request.future = new SQLFuture<SQLProcedureResult>();
+
+        requests.add(request);
+        synchronized(lock){
+            lock.notifyAll();
+        }
+
+        return request.future;
+    }
+
+    public SQLFuture execPrepared(String statement, String[] args){
+        DatabaseRequest request = new DatabaseRequest();
+        request.value = statement;
+        request.future = new SQLFuture<SQLProcedureResult>();
+
+        request.vals = args;
+        request.prepared = true;
 
         requests.add(request);
         synchronized(lock){
@@ -89,11 +105,13 @@ public class DatabaseConnectionPool{
     private class DatabaseRequest{
         String value;
         SQLFuture future;
+        List<Tuple<Database.ValueTypes, Object>> vals;
+        boolean prepared = false;
     }
 
     private class DatabaseConnectionThread implements Runnable{
+        private Map<String, CallableStatement> statements = new HashMap<>();
         private Logger logger = new Logger();
-        private Connection conn;
         private volatile boolean run = true;
         private String address;
         private DBCredentials creds;
@@ -105,31 +123,64 @@ public class DatabaseConnectionPool{
 
         @Override
         public void run()  {
-            try(Connection connection = DriverManager.getConnection(address, creds.getUsername(), creds.getSinglePassword())){
+            try(Connection connection =
+                        DriverManager.getConnection(address, creds.getUsername(), creds.getSinglePassword())){
                 while(run){
-                    synchronized(lock){
-                        while(requests.isEmpty()){
-                            try{
-                                lock.wait();
-                            }catch(InterruptedException e){
-                                e.printStackTrace();
+                    DatabaseRequest request = getNextValue();
+                    if(request == null) continue;
+
+
+                    if(request.prepared){
+                        CallableStatement statement = statements.getOrDefault
+                                (request.value,
+                                connection.prepareCall(request.value));
+
+                        statements.putIfAbsent(request.value, statement);
+
+                        for(int i = 0; i < request.vals.size(); i++){
+                            var argument = request.vals.get(i);
+
+                            switch(argument.t){
+                                case INT:
+                                    statement.setInt(i, (Integer) argument.t1);
+                                case FLOAT:
+                                    statement.setFloat(i, (Float) argument.t1);
+                                case DOUBLE:
+                                    statement.setDouble(i, (Double) argument.t1);
+                                case BYTE:
+                                    statement.setByte(i, (Byte) argument.t1);
+                                case BOOLEAN:
+                                    statement.setInt(i, (Integer) argument.t1);
+                                case STRING:
+                                    statement.setInt(i, (Integer) argument.t1);
+
                             }
                         }
-
-                        var request = requests.poll();
-
-                        if(request == null) continue;
-
+                    }else{
                         var statement = connection.createStatement();
                         statement.execute(request.value);
                         request.future.set(new SQLResult(statement.getResultSet()), statement.getUpdateCount());
                     }
+
                 }
             }catch(SQLException e){
                 logger.severe(e.getMessage());
                 System.exit(0);
             }
         }
+    }
+
+    private DatabaseRequest getNextValue(){
+        synchronized(lock){
+            while(requests.isEmpty()){
+                try{
+                    lock.wait();
+                }catch(InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        return requests.poll();
     }
 }
 

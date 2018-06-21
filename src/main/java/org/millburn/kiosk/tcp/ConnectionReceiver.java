@@ -1,9 +1,11 @@
 package org.millburn.kiosk.tcp;
 
+import org.millburn.kiosk.Server;
 import org.millburn.kiosk.logging.Logger;
 
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 public class ConnectionReceiver implements Runnable{
     public static final int PORT = 94828;
@@ -47,6 +49,40 @@ public class ConnectionReceiver implements Runnable{
 
     @Override
     public void run(){
+        while(true){
+            try{
+                Socket nsocket = socket.accept();
+                var message = Message.read(nsocket.getInputStream());
 
+                nsocket.getOutputStream().write(0);
+                nsocket.getOutputStream().flush();
+
+                var type = message.type;
+
+                if(type != 0){
+                    logger.warn("Invalid message type for new socket at " + nsocket.getInetAddress() + ", type is " + type);
+                    nsocket.close();
+                    continue;
+                }
+
+                var devicetype = message.getDataStream().readInt();
+                var deviceid   = message.getDataStream().readInt();
+
+                Connection conn;
+
+                if(devicetype == Connection.KIOSK){
+                    Server.getCurrent().addKiosk(conn = new KioskConnection(nsocket, devicetype, deviceid));
+                }else{
+                    Server.getCurrent().addTablets(conn = new TabletConnection(nsocket, devicetype, deviceid));
+                }
+
+                var thread = new Thread(conn);
+                thread.setDaemon(true);
+
+                thread.start();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 }

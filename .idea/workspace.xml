@@ -2,46 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8c0e8e-c477-4a56-af5a-e67d15560748" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DBCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLProcedureResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/SerializeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/Tuple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/ConnectionReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/ServerInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/ServerInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/ConsoleLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/ConsoleLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/FileLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/FileLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/LogMessage$Priority.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/LogMessage$Priority.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/LogMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/LogMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/LoggingHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/LoggingHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/logging/MessageHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/InvalidServerStateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/InvalidServerStateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/ConsoleLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/ConsoleLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/FileLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/FileLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LogMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LogMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LoggingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LoggingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TCPConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TCPConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Connection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -58,13 +37,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServerInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java">
+      <file leaf-file-name="TabletConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="1391">
+              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,62 +61,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="180">
+              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SQLFuture.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="method#set#0;class#SQLFuture#0" />
-                <element signature="method#getResults#0;class#SQLFuture#0" />
-                <element signature="method#getUpdateAmount#0;class#SQLFuture#0" />
-                <element signature="method#waitForCompletion#0;class#SQLFuture#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBCredentials.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DBCredentials.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnectionPool.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#run#0;class#DatabaseConnectionThread#0;class#DatabaseConnectionPool#0" />
               </folding>
             </state>
           </provider>
@@ -136,8 +76,34 @@
       <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="461">
+              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseConnectionPool.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="144" column="77" selection-start-line="144" selection-start-column="77" selection-end-line="144" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#run#0;class#DatabaseConnectionPool#0" />
+                <element signature="method#execPrepared#0;class#DatabaseConnectionPool#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -581,10 +547,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/ConsoleLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/FileLogger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/InvalidServerStateException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Configuration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Connection.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/DBCredentials.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/DBFuture.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LoggingHandler.java" />
@@ -592,19 +556,31 @@
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/DatabaseConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/SQLFuture.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/MessageContainer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGInputStream.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/SerializeUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGOutputStream.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLProcedureResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/Tuple.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="480" />
+    <option name="x" value="253" />
     <option name="width" value="1281" />
     <option name="height" value="1440" />
   </component>
@@ -617,8 +593,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="NBKnowledgePane" />
       <pane id="ProjectPane">
         <subPane>
@@ -679,6 +653,14 @@
             </path>
             <path>
               <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KioskServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -687,6 +669,8 @@
         <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -697,11 +681,22 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/logs/2018-06-08.log&#10;true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NetBeansProjects/VehicleProblem" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.millburn.kiosk.util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.millburn.kiosk.tcp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Javier\Documents\Kiosk\KioskServer\src\main\java\org\millburn\kiosk\util" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -719,7 +714,7 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Unnamed" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="Production" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -806,7 +801,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.22365591" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.23082437" />
       <window_info id="Learn" order="4" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
@@ -824,39 +819,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32941177" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
-      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.49964157" visible="true" weight="0.32873276" />
-      <window_info id="Designer" order="1" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32967034" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5003584" side_tool="true" weight="0.32873276" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="JProfiler" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Gradle" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.20501792" />
-      <window_info id="Learn" order="4" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Unicode Browser" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32941177" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
@@ -866,101 +828,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/FileLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LogMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="37" column="107" selection-start-line="37" selection-start-column="107" selection-end-line="37" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/FileLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LogMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="37" column="107" selection-start-line="37" selection-start-column="107" selection-end-line="37" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/FileLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/org/millburn/kiosk/logging/Logger.java" />
     <entry file="file://$PROJECT_DIR$/cfg/log.cfg" />
@@ -1023,13 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1037,13 +909,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TCPConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1110,35 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -1163,23 +999,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="method#set#0;class#SQLFuture#0" />
-            <element signature="method#getResults#0;class#SQLFuture#0" />
-            <element signature="method#getUpdateAmount#0;class#SQLFuture#0" />
-            <element signature="method#waitForCompletion#0;class#SQLFuture#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DBCredentials.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="135" column="26" lean-forward="true" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/Instant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1153">
+          <caret line="1141" column="16" selection-start-line="1141" selection-start-column="16" selection-end-line="1141" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/MessageContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#ExecutorContainer#0;class#Executor#0" />
+            <element signature="class#Sleeper#0;class#Executor#0" />
+            <element signature="class#UselessSleeper#0;class#Executor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TCPConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/SerializeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2367#2368#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1193,10 +1129,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="method#getResults#0;class#SQLFuture#0" />
+            <element signature="method#waitForCompletion#0;class#SQLFuture#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="81" column="31" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="391">
+          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loadConfigs#0;class#Server#0" />
+            <element signature="method#recursiveLoadConfigs#0;class#Server#0" />
+            <element signature="method#getCurrent#0;class#Server#0" />
+            <element signature="e#2807#2808#0" expanded="true" />
+            <element signature="e#2855#2856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1205,18 +1187,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="461">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLProcedureResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1391">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="448">
+          <caret line="144" column="77" selection-start-line="144" selection-start-column="77" selection-end-line="144" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#run#0;class#DatabaseConnectionThread#0;class#DatabaseConnectionPool#0" />
+            <element signature="method#run#0;class#DatabaseConnectionPool#0" />
+            <element signature="method#execPrepared#0;class#DatabaseConnectionPool#0" />
           </folding>
         </state>
       </provider>

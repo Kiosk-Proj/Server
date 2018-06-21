@@ -2,6 +2,7 @@ package org.millburn.kiosk.db.impl;
 
 import org.millburn.kiosk.db.Database;
 import org.millburn.kiosk.db.DatabaseConnectionPool;
+import org.millburn.kiosk.db.SQLFuture;
 import org.millburn.kiosk.db.SQLResult;
 import org.millburn.kiosk.logging.Logger;
 
@@ -31,6 +32,12 @@ public class ProductionDatabase implements Database{
     public SQLResult requestQuery(String query){
         return pool.query(query).getResults();
     }
+
+    @Override
+    public SQLFuture query(String query){
+        return pool.query(query);
+    }
+
 
     @Override
     public void disconnect(){

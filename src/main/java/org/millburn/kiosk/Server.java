@@ -3,10 +3,10 @@ package org.millburn.kiosk;
 import org.millburn.kiosk.db.Database;
 import org.millburn.kiosk.exception.InvalidServerStateException;
 import org.millburn.kiosk.logging.Logger;
+import org.millburn.kiosk.tcp.Connection;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,9 @@ public class Server{
     private State state = State.INITIALIZING;
     private boolean test = false;
 
-    private Map<Integer, Transaction> transactions;
+    private Map<Long, Transaction> transactions;
+    private List<Connection> kiosks = new ArrayList<>();
+    private List<Connection> tablets = new ArrayList<>();
 
     private Server(){
         database = Database.getDatabase("jdbc:mysql://localhost:3306/test", "javster101", "maligna101");
@@ -34,13 +36,12 @@ public class Server{
             Thread.sleep(5000);
         }catch(InterruptedException e){
             e.printStackTrace();
-        }catch(SQLException e){
-            e.printStackTrace();
         }
     }
 
     public static boolean initialize(){
         server = new Server();
+        Executor.initialize();
         return true;
     }
 
@@ -82,6 +83,32 @@ public class Server{
 
     public boolean isTesting(){
         return test;
+    }
+
+    public Transaction createTransaction(int userid, int kiosk, String name){
+        var transaction = new Transaction(userid, kiosk, name);
+        this.transactions.put(transaction.getTransactionId(), transaction);
+        return transaction;
+    }
+
+    public Transaction getTransaction(long transid){
+        return transactions.get(transid);
+    }
+
+    public void processTransaction(Transaction transaction){
+
+    }
+
+    public void addKiosk(Connection conn){
+        this.kiosks.add(conn);
+    }
+
+    public void addTablets(Connection conn){
+        this.tablets.add(conn);
+    }
+
+    public Database getDatabase(){
+        return database;
     }
 
     public enum State{

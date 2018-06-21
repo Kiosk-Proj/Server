@@ -1,6 +1,7 @@
 package org.millburn.kiosk.db.impl;
 
 import org.millburn.kiosk.db.Database;
+import org.millburn.kiosk.db.SQLFuture;
 import org.millburn.kiosk.db.SQLResult;
 
 import java.sql.ResultSet;
@@ -20,6 +21,11 @@ public class TestDatabase implements Database{
     @Override
     public SQLResult requestQuery(String query){
         return db.requestQuery(query);
+    }
+
+    @Override
+    public SQLFuture query(String query){
+        return db.query(query);
     }
 
     @Override

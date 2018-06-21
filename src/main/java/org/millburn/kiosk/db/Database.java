@@ -23,5 +23,13 @@ public interface Database{
 
     SQLResult requestQuery(String query);
 
+    SQLFuture<SQLResult> query(String query);
+
+    SQLFuture<SQLProcedureResult> runProcedure(String procname, String... args);
+
     void disconnect();
+
+    enum ValueTypes{
+        STRING, INT, FLOAT, DOUBLE, BYTE, BOOLEAN;
+    }
 }

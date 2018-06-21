@@ -2,16 +2,14 @@ package org.millburn.kiosk.db;
 
 import java.sql.ResultSet;
 
-public class SQLFuture{
+public class SQLFuture<T>{
     private final Object lock = new Object();
 
-    private SQLResult t;
-    private int updateamount;
+    private T t;
     private boolean exists;
 
-    public void set(SQLResult set, int updateamount){
-        this.t = set;
-        this.updateamount = updateamount;
+    public void set(T val, int updateamount){
+        this.t = val;
         exists = true;
         synchronized(lock){
             lock.notifyAll();
@@ -22,14 +20,9 @@ public class SQLFuture{
         return exists;
     }
 
-    public SQLResult getResults(){
+    public T getResults(){
         waitForCompletion();
         return t;
-    }
-
-    public int getUpdateAmount(){
-        waitForCompletion();
-        return updateamount;
     }
 
     private void waitForCompletion(){
