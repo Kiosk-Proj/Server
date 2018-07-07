@@ -2,6 +2,7 @@ package org.millburn.kiosk.db.impl;
 
 import org.millburn.kiosk.db.Database;
 import org.millburn.kiosk.db.SQLFuture;
+import org.millburn.kiosk.db.SQLProcedureResult;
 import org.millburn.kiosk.db.SQLResult;
 
 import java.sql.ResultSet;
@@ -14,11 +15,6 @@ public class TestDatabase implements Database{
     }
 
     @Override
-    public int updateQuery(String query){
-        return db.updateQuery(query);
-    }
-
-    @Override
     public SQLResult requestQuery(String query){
         return db.requestQuery(query);
     }
@@ -26,6 +22,11 @@ public class TestDatabase implements Database{
     @Override
     public SQLFuture query(String query){
         return db.query(query);
+    }
+
+    @Override
+    public SQLProcedureResult runProcedure(String procname, String... args) {
+        return db.runProcedure(procname, args);
     }
 
     @Override

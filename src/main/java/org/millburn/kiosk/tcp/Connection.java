@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.time.Instant;
 
 public abstract class Connection implements Runnable{
-    public static final int KIOSK = 1, SERVER = 2;
+    public static final int KIOSK = 1, TABLET = 2;
 
     private Socket socket;
     private Instant time;

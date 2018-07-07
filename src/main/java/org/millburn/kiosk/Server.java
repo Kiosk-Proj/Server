@@ -4,13 +4,13 @@ import org.millburn.kiosk.db.Database;
 import org.millburn.kiosk.exception.InvalidServerStateException;
 import org.millburn.kiosk.logging.Logger;
 import org.millburn.kiosk.tcp.Connection;
+import org.millburn.kiosk.tcp.ConnectionReceiver;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class Server{
     private static Logger logger = new Logger();
@@ -25,18 +25,13 @@ public class Server{
     private List<Connection> tablets = new ArrayList<>();
 
     private Server(){
-        database = Database.getDatabase("jdbc:mysql://localhost:3306/test", "javster101", "maligna101");
-        transactions = new ConcurrentHashMap<>();
+        //database = Database.getDatabase("jdbc:mysql://localhost:3306/test", "javster101", "maligna101");
+        //transactions = new ConcurrentHashMap<>();
     }
 
     public void run(){
         state = State.RUNNING;
-        try{
-            var results = database.requestQuery("SELECT * FROM testtable");
-            Thread.sleep(5000);
-        }catch(InterruptedException e){
-            e.printStackTrace();
-        }
+        ConnectionReceiver.get();
     }
 
     public static boolean initialize(){

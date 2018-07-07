@@ -19,13 +19,11 @@ public interface Database{
         }
     }
 
-    int updateQuery(String query);
-
     SQLResult requestQuery(String query);
 
     SQLFuture<SQLResult> query(String query);
 
-    SQLFuture<SQLProcedureResult> runProcedure(String procname, String... args);
+    SQLProcedureResult runProcedure(String procname, String... args);
 
     void disconnect();
 

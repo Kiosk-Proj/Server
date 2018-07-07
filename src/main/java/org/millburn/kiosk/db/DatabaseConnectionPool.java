@@ -55,10 +55,10 @@ public class DatabaseConnectionPool{
         return new DBCredentials(username, password);
     }
 
-    public SQLFuture query(String command){
+    public SQLFuture<SQLResult> query(String command){
         DatabaseRequest request = new DatabaseRequest();
         request.value = command;
-        request.future = new SQLFuture<SQLProcedureResult>();
+        request.future = new SQLFuture<SQLResult>();
 
         requests.add(request);
         synchronized(lock){
@@ -68,12 +68,12 @@ public class DatabaseConnectionPool{
         return request.future;
     }
 
-    public SQLFuture execPrepared(String statement, String[] args){
+    public SQLFuture<SQLProcedureResult> execPrepared(String statement, String[] args){
         DatabaseRequest request = new DatabaseRequest();
         request.value = statement;
         request.future = new SQLFuture<SQLProcedureResult>();
 
-        request.vals = args;
+        request.args = args;
         request.prepared = true;
 
         requests.add(request);
@@ -105,6 +105,7 @@ public class DatabaseConnectionPool{
     private class DatabaseRequest{
         String value;
         SQLFuture future;
+        String[] args;
         List<Tuple<Database.ValueTypes, Object>> vals;
         boolean prepared = false;
     }

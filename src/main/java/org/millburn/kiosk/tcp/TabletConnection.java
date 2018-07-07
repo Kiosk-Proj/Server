@@ -59,8 +59,7 @@ public class TabletConnection extends Connection{
             try{
                 var message = Message.read(getSocket().getInputStream());
                 var transactionid = message.transationId;
-                var id = message.getDataStream().readInt();
-                var accept = message.getDataStream().readByte();
+                var accept = message.getDataStream().readInt();
 
                 var transaction = Server.getCurrent().getTransaction(transactionid);
 

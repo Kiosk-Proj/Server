@@ -29,6 +29,11 @@ public class Message{
         return new Message(instream);
     }
 
+    public static void sendAcknowledgement(OutputStream out) throws IOException {
+        Message message = new Message(7, 0, ByteBuffer.allocate(Integer.BYTES).putInt(0).array());
+        message.write(out);
+    }
+
     private Message(InputStream instream) throws IOException{
         var in = new GGInputStream(SerializeUtil.readBytes(instream));
         instant = Instant.now();
@@ -54,5 +59,6 @@ public class Message{
         out.write(data.array().length);
         out.write(data.array());
         SerializeUtil.sendBytes(outstream, ((ByteArrayOutputStream) out.getStream()).toByteArray());
+        out.flush();
     }
 }

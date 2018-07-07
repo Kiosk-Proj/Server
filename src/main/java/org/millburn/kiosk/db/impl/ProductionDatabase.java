@@ -1,9 +1,6 @@
 package org.millburn.kiosk.db.impl;
 
-import org.millburn.kiosk.db.Database;
-import org.millburn.kiosk.db.DatabaseConnectionPool;
-import org.millburn.kiosk.db.SQLFuture;
-import org.millburn.kiosk.db.SQLResult;
+import org.millburn.kiosk.db.*;
 import org.millburn.kiosk.logging.Logger;
 
 import java.sql.ResultSet;
@@ -24,11 +21,6 @@ public class ProductionDatabase implements Database{
     }
 
     @Override
-    public int updateQuery(String query){
-        return pool.query(query).getUpdateAmount();
-    }
-
-    @Override
     public SQLResult requestQuery(String query){
         return pool.query(query).getResults();
     }
@@ -38,11 +30,14 @@ public class ProductionDatabase implements Database{
         return pool.query(query);
     }
 
+    @Override
+    public SQLProcedureResult runProcedure(String procname, String... args) {
+        return pool.execPrepared(procname, args).getResults();
+    }
+
 
     @Override
     public void disconnect(){
         //todo
     }
-
-
 }

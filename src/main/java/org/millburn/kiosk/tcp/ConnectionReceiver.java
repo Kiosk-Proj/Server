@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ConnectionReceiver implements Runnable{
-    public static final int PORT = 94828;
+    public static final int PORT = 25565;
     private static ConnectionReceiver receiversingleton;
     private static Thread receiverthread;
     private static Logger logger = new Logger();
@@ -52,12 +52,20 @@ public class ConnectionReceiver implements Runnable{
         while(true){
             try{
                 Socket nsocket = socket.accept();
+                logger.info("Connection received from " + nsocket.getInetAddress());
                 var message = Message.read(nsocket.getInputStream());
 
-                nsocket.getOutputStream().write(0);
-                nsocket.getOutputStream().flush();
+                Message.sendAcknowledgement(nsocket.getOutputStream());
 
-                var type = message.type;
+                var type       = message.type;
+                var devicetype = message.getDataStream().readInt();
+                var deviceid   = message.getDataStream().readInt();
+
+                if(devicetype != 0 && devicetype != 1){
+                    logger.warn("Connection from " + nsocket.getInetAddress() + " had invalid type of " + devicetype + ", disconnecting");
+                    nsocket.close();
+                    continue;
+                }
 
                 if(type != 0){
                     logger.warn("Invalid message type for new socket at " + nsocket.getInetAddress() + ", type is " + type);
@@ -65,11 +73,9 @@ public class ConnectionReceiver implements Runnable{
                     continue;
                 }
 
-                var devicetype = message.getDataStream().readInt();
-                var deviceid   = message.getDataStream().readInt();
-
                 Connection conn;
 
+                logger.info("Established connection with " + (devicetype == 0 ? "kiosk " : "tablet ") + deviceid);
                 if(devicetype == Connection.KIOSK){
                     Server.getCurrent().addKiosk(conn = new KioskConnection(nsocket, devicetype, deviceid));
                 }else{

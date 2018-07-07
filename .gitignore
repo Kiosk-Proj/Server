@@ -1,6 +1,7 @@
-build
+build/
 .idea
 logs
 *.iml
 out
 gen
+*.class

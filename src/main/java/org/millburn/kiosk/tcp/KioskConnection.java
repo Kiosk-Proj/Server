@@ -22,15 +22,12 @@ public class KioskConnection extends Connection{
             var resultfuture = Server.getCurrent().getDatabase().query("");
             var resultset = resultfuture.getResults();
 
-
-
             if(resultset.getRows().size() == 0){
                 var out = new GGOutputStream();
-                out.write(-1);
                 out.write("");
 
                 var outmessage = new Message(Message.NUMCONFIRM,
-                            0,
+                            -1,
                             out.getData());
                 outmessage.write(getSocket().getOutputStream());
             }else{
@@ -38,7 +35,6 @@ public class KioskConnection extends Connection{
                 var transaction = Server.getCurrent().createTransaction(userid, this.getId(), name);
 
                 var out = new GGOutputStream();
-                out.write(userid);
                 out.write(name);
 
                 var outmessage = new Message(Message.NUMCONFIRM,
