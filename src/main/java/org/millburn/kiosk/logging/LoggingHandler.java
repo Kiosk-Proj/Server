@@ -8,7 +8,7 @@ public class LoggingHandler {
 
     public static void initialize(){
         receivers.add(new FileLogger(LogMessage.Priority.WARNING));
-        receivers.add(new ConsoleLogger(LogMessage.Priority.INFO));
+        receivers.add(new ConsoleLogger(LogMessage.Priority.DEBUG));
     }
 
     public static void receive(LogMessage message){

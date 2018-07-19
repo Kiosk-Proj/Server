@@ -7,6 +7,7 @@ import org.millburn.kiosk.util.SerializeUtil;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.time.Instant;
+import java.util.Arrays;
 
 import static org.millburn.kiosk.util.SerializeUtil.readBytes;
 
@@ -35,7 +36,7 @@ public class Message{
     }
 
     private Message(InputStream instream) throws IOException{
-        var in = new GGInputStream(SerializeUtil.readBytes(instream));
+        var in = new GGInputStream(new DataInputStream(instream));
         instant = Instant.now();
         type = in.readInt();
         transationId = in.readLong();
@@ -46,6 +47,7 @@ public class Message{
         this.type = type;
         this.transationId = transactionId;
         this.data = ByteBuffer.wrap(data);
+        this.data.flip();
     }
 
     public GGInputStream getDataStream(){
@@ -53,12 +55,14 @@ public class Message{
     }
 
     public void write(OutputStream outstream) throws IOException{
+        data.rewind();
+
         var out = new GGOutputStream();
         out.write(type);
         out.write(transationId);
         out.write(data.array().length);
         out.write(data.array());
-        SerializeUtil.sendBytes(outstream, ((ByteArrayOutputStream) out.getStream()).toByteArray());
-        out.flush();
+        new DataOutputStream(outstream).write(out.getData(), 0, out.getData().length);
+        outstream.flush();
     }
 }

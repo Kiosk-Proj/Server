@@ -124,8 +124,12 @@ public class DatabaseConnectionPool{
 
         @Override
         public void run()  {
+            Properties properties = new Properties();
+            properties.put("user", creds.getUsername());
+            properties.put("password", creds.getSinglePassword());
+            properties.put("useSSL", "false");
             try(Connection connection =
-                        DriverManager.getConnection(address, creds.getUsername(), creds.getSinglePassword())){
+                        DriverManager.getConnection(address, properties)){
                 while(run){
                     DatabaseRequest request = getNextValue();
                     if(request == null) continue;
@@ -165,8 +169,7 @@ public class DatabaseConnectionPool{
 
                 }
             }catch(SQLException e){
-                logger.severe(e.getMessage());
-                System.exit(0);
+                e.printStackTrace();
             }
         }
     }

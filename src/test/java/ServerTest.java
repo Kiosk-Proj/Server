@@ -3,6 +3,7 @@
  */
 import org.junit.Assert;
 import org.junit.Test;
+import org.millburn.kiosk.Server;
 import org.millburn.kiosk.ServerInitializer;
 import org.millburn.kiosk.tcp.Message;
 
@@ -19,13 +20,15 @@ public class ServerTest {
     }
 
     @Test public void testTCP() throws IOException, InterruptedException {
-        ServerInitializer.main();
+        var t = new Thread(ServerInitializer::main);
+        t.setDaemon(true);
+        t.start();
 
         Thread.sleep(500);
 
         Socket socket = new Socket("localhost", 25565);
 
-        Message message = new Message(Message.CONNECTION, 0, ByteBuffer.allocate(2 * Integer.SIZE).putInt(1).putInt(2).array());
+        Message message = new Message(Message.CONNECTION, 0, ByteBuffer.allocate(2 * Integer.SIZE).putInt(0).putInt(2).array());
         message.write(socket.getOutputStream());
 
         try {
@@ -34,6 +37,16 @@ public class ServerTest {
             Assert.fail();
         }
 
-        Thread.sleep(500);
+        Thread.sleep(200);
+
+        message = new Message(Message.INPUT, 0, ByteBuffer.allocate(Integer.SIZE).putInt(12598).array());
+        message.write(socket.getOutputStream());
+
+        Message.read(socket.getInputStream());
+
+        var returnm = Message.read(socket.getInputStream());
+
+        System.out.println("Received " + returnm.getDataStream().readString());
+
     }
 }

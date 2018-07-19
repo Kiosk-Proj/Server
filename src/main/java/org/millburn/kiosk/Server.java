@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Server{
     private static Logger logger = new Logger();
@@ -25,13 +26,21 @@ public class Server{
     private List<Connection> tablets = new ArrayList<>();
 
     private Server(){
-        //database = Database.getDatabase("jdbc:mysql://localhost:3306/test", "javster101", "maligna101");
-        //transactions = new ConcurrentHashMap<>();
+        database = Database.getDatabase("jdbc:mysql://localhost:3306/kiosk", "javster101", "maligna101");
+        transactions = new ConcurrentHashMap<>();
     }
 
     public void run(){
         state = State.RUNNING;
         ConnectionReceiver.get();
+
+        while (true){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static boolean initialize(){

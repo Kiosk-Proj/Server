@@ -16,10 +16,13 @@ public class SQLResult implements Iterable<SQLResult.Row>{
         this.set = set;
         var trows = new ArrayList<Row>();
         int i = 0;
+        System.out.println(set.getFetchSize());
         while(!set.isLast()){
+            System.out.println(set.getRow());
             trows.add(new Row(i));
             set.next();
             i++;
+
         }
 
         rows = List.copyOf(trows);

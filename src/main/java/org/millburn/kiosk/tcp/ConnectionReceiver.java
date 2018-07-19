@@ -40,6 +40,7 @@ public class ConnectionReceiver implements Runnable{
 
         receiverthread.start();
 
+        receiversingleton = receiver;
         return receiver;
     }
 
@@ -55,7 +56,7 @@ public class ConnectionReceiver implements Runnable{
                 logger.info("Connection received from " + nsocket.getInetAddress());
                 var message = Message.read(nsocket.getInputStream());
 
-                Message.sendAcknowledgement(nsocket.getOutputStream());
+                //Message.sendAcknowledgement(nsocket.getOutputStream());
 
                 var type       = message.type;
                 var devicetype = message.getDataStream().readInt();
@@ -86,7 +87,7 @@ public class ConnectionReceiver implements Runnable{
                 thread.setDaemon(true);
 
                 thread.start();
-            }catch(IOException e){
+            }catch(Exception e){
                 e.printStackTrace();
             }
         }
