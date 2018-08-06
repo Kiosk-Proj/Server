@@ -2,30 +2,34 @@ package org.millburn.kiosk.db;
 
 import java.io.InputStream;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Spliterator;
+import java.sql.Date;
+import java.util.*;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 public class SQLResult implements Iterable<SQLResult.Row>{
     private ResultSet set;
     private List<Row> rows;
 
-    public SQLResult(ResultSet set) throws SQLException{
-        this.set = set;
-        var trows = new ArrayList<Row>();
-        int i = 0;
-        System.out.println(set.getFetchSize());
-        while(!set.isLast()){
-            System.out.println(set.getRow());
-            trows.add(new Row(i));
-            set.next();
-            i++;
-
+    public static int getResultSize(ResultSet resultSet){
+        int size = 0;
+        try {
+            resultSet.last();
+            size = resultSet.getRow();
+            resultSet.beforeFirst();
         }
+        catch(Exception ex) {
+            return 0;
+        }
+        return size;
+    }
 
-        rows = List.copyOf(trows);
+    public SQLResult(ResultSet set){
+        this.set = set;
+        rows = IntStream.range(0, getResultSize(set)).mapToObj(Row::new).collect(Collectors.toList());
     }
 
     public List<Row> getRows(){
@@ -35,6 +39,10 @@ public class SQLResult implements Iterable<SQLResult.Row>{
     @Override
     public Iterator<Row> iterator(){
         return rows.listIterator();
+    }
+
+    public Stream<Row> stream(){
+        return StreamSupport.stream(spliterator(), false);
     }
 
     @Override

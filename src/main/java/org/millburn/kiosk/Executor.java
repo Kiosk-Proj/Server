@@ -1,7 +1,8 @@
 package org.millburn.kiosk;
 
-import java.time.Instant;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -41,18 +42,33 @@ public class Executor{
         var tlist = containers.stream()
                 .peek(c -> c.time -= time)
                 .filter(ExecutorContainer::isComplete)
-                .peek(ExecutorContainer::execute)
                 .collect(Collectors.toList());
 
         containers.removeAll(tlist);
+
+        tlist.forEach(ExecutorContainer::execute);
     }
 
     public static Sleeper at(Instant instant, Runnable exec){
         return in(Instant.now().until(instant, ChronoUnit.MILLIS), exec);
     }
 
+    public static void every(TemporalAmount period, Runnable exec){
+        new Runnable() {
+            @Override
+            public void run() {
+                in(period, this);
+                exec.run();
+            }
+        }.run();
+    }
+
     public static Sleeper in(long millis, Runnable exec){
         return getExecutor().inInternal(millis, exec);
+    }
+
+    public static Sleeper in(TemporalAmount period, Runnable exec){
+        return  at(ZonedDateTime.now().plus(period).toInstant(), exec::run);
     }
 
     private Sleeper inInternal(long millis, Runnable exec){

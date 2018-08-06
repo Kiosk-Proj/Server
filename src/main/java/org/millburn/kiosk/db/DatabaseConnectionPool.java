@@ -28,7 +28,7 @@ public class DatabaseConnectionPool{
         this.username = username;
         this.pw = pw;
         this.amount = amount;
-        requests = new LinkedBlockingQueue<>(100);
+        requests = new LinkedBlockingQueue<>(500);
     }
 
     public void run(){
@@ -127,7 +127,7 @@ public class DatabaseConnectionPool{
             Properties properties = new Properties();
             properties.put("user", creds.getUsername());
             properties.put("password", creds.getSinglePassword());
-            properties.put("useSSL", "false");
+            //properties.put("useSSL", "false");
             try(Connection connection =
                         DriverManager.getConnection(address, properties)){
                 while(run){
@@ -163,7 +163,11 @@ public class DatabaseConnectionPool{
                         }
                     }else{
                         var statement = connection.createStatement();
-                        statement.execute(request.value);
+                        try{
+                            statement.execute(request.value);
+                        }catch (SQLException e){
+                            throw new RuntimeException("Error on statement " + request.value, e);
+                        }
                         request.future.set(new SQLResult(statement.getResultSet()), statement.getUpdateCount());
                     }
 

@@ -14,6 +14,5 @@ public class ServerInitializer {
         LoggingHandler.initialize();
         logger.info("Initializing kiosk service...");
         Server.initialize();
-        Server.getCurrent().run();
     }
 }

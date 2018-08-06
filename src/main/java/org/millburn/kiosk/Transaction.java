@@ -3,23 +3,23 @@ package org.millburn.kiosk;
 import java.time.Instant;
 
 public class Transaction{
-    private static long currentId = 0;
+    public static long currentId = 0;
 
     private final long transactionId;
     private final int userId;
     private final String name;
-    private final Instant receptionTime;
-    private final int kioskId;
+    private final int kiosk;
+
     private boolean validated;
 
     private State state;
 
-    public Transaction(int userId, int kioskId, String name){
+    public Transaction(int userId, int kiosk, String name){
         this.transactionId = currentId++;
         this.userId = userId;
-        this.kioskId = kioskId;
-        this.receptionTime = Instant.now();
         this.name = name;
+        this.kiosk = kiosk;
+        this.validated = true;
     }
 
     public long getTransactionId(){
@@ -40,6 +40,10 @@ public class Transaction{
 
     public boolean isValidated(){
         return validated;
+    }
+
+    public int getKiosk() {
+        return kiosk;
     }
 
     public void setValidated(boolean validated){
