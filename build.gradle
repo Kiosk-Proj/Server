@@ -6,20 +6,31 @@
  * user guide available at https://docs.gradle.org/4.8/userguide/tutorial_java_projects.html
  */
 
-plugins {
-    // Apply the java plugin to add support for Java
-    id 'java'
-
-    // Apply the application plugin to add support for building an application
-    id 'application'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE")
+    }
 }
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 // Define the main class for the application
 mainClassName = 'org.millburn.kiosk.ServerInitializer'
 
+ext.moduleName = 'co.linkchain.blockchain'
+
+sourceCompatibility = 1.10
+targetCompatibility = 1.10
+
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:23.0'
+    compile("org.springframework.boot:spring-boot-starter-web")
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
 
     // Use JUnit test framework
@@ -31,4 +42,15 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
+}
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
 }
