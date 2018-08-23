@@ -1,16 +1,13 @@
 package org.millburn.kiosk.http;
 
+import org.millburn.kiosk.Executor;
 import org.millburn.kiosk.LogEvent;
 import org.millburn.kiosk.Server;
 import org.millburn.kiosk.Student;
 import org.millburn.kiosk.logging.Logger;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
@@ -31,8 +28,7 @@ public class HttpReceiver {
 
             log.debug("Kiosk requested ID " + userid + ", found student " + s.getName());
 
-            Server.getCurrent().processTransaction(transaction);
-
+            Executor.async(() -> Server.getCurrent().processTransaction(s, transaction));
         }, () ->
             log.debug("Kiosk requested ID " + userid + ", no student found")
         );
@@ -41,31 +37,31 @@ public class HttpReceiver {
     }
 
     @CrossOrigin()
-    @RequestMapping(value = "/getallstudents", method = RequestMethod.GET)
+    @RequestMapping(value = "/students", method = RequestMethod.GET)
     public List<Student> getAllStudents(){
         return Server.getCurrent().getAllStudents();
     }
 
     @CrossOrigin()
-    @RequestMapping(value = "/getalltransactions", method = RequestMethod.GET)
-    public List<LogEvent> getAllTransactions(){
-        return Server.getCurrent().getAllTransactions();
-    }
-
-    @CrossOrigin()
-    @RequestMapping(value = "/getstudent", method = RequestMethod.GET)
+    @RequestMapping(value = "/student", method = RequestMethod.GET)
     public Student getStudent(@RequestParam("id") int id){
         return Server.getCurrent().getStudent(id).get();
     }
 
     @CrossOrigin()
-    @RequestMapping(value = "/getstudentsout", method = RequestMethod.GET)
+    @RequestMapping(value = "/students/out", method = RequestMethod.GET)
     public List<StudentLogPair> getStudentsOut(){
         return getPairFromList(Server.getCurrent().getStudentsOut());
     }
 
-    @CrossOrigin()
-    @RequestMapping(value = "/isout", method = RequestMethod.GET)
+    @CrossOrigin
+    @RequestMapping(value = "/img", method = RequestMethod.GET)
+    public String getImage(@RequestParam("id") int id){
+        return getStudent(id).getPath();
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "/student/out", method = RequestMethod.GET)
     public Optional<LogEvent> isOut(@RequestParam("id") int id){
         return Server.getCurrent().getStudentsOut()
                 .stream()
@@ -73,38 +69,41 @@ public class HttpReceiver {
                 .findFirst();
     }
 
-    @CrossOrigin()
+    @CrossOrigin
+    @RequestMapping(value = "/transactions", method = RequestMethod.GET)
+    public List<LogEvent> getAllTransactions(){
+        return Server.getCurrent().getAllTransactions();
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "/transactions/flagged", method = RequestMethod.GET)
+    public List<StudentLogPair> getAllFlagged(){
+        return getPairFromList(Server.getCurrent().getFlaggedTransactions());
+    }
+
+    @CrossOrigin
     @RequestMapping(value = "/tablet/getrecent", method = RequestMethod.GET)
-    public List<StudentLogPair> getrecent(@RequestParam("kiosk") int kiosk){
+    public List<StudentLogPair> getRecent(@RequestParam("kiosk") int kiosk){
         var list = new ArrayList<>(getPairFromList(Server.getCurrent().getTransactionsToday()).stream().filter(s -> s.log.getKiosk() == kiosk).collect(Collectors.toList()));
         Collections.reverse(list);
         return list;
     }
 
-    @CrossOrigin()
-    @RequestMapping(value = "/tablet/flag", method = RequestMethod.GET)
-    public int flag(@RequestParam("id") int id){
-        Server.getCurrent().setValidated(Server.getCurrent().getLatestTransactionFor(id), false);
+    @CrossOrigin
+    @RequestMapping(value = "/tablet/flag", method = RequestMethod.POST)
+    public int flag(@RequestParam("id") int id, @RequestParam("flagged") int flagged){
+        if(flagged > 0)
+            Server.getCurrent().setValidated(Server.getCurrent().getLatestTransactionFor(id), true);
+        else
+            Server.getCurrent().setValidated(Server.getCurrent().getLatestTransactionFor(id), false);
+
         return 1;
     }
 
-    @CrossOrigin()
-    @RequestMapping(value = "/tablet/unflag", method = RequestMethod.GET)
-    public int unflag(@RequestParam("id") int id){
-        Server.getCurrent().setValidated(Server.getCurrent().getLatestTransactionFor(id), true);
-        return 0;
-    }
-
-    @CrossOrigin()
-    @RequestMapping(value = "/tablet/getflagged", method = RequestMethod.GET)
-    public List<StudentLogPair> getAllFlagged(){
-        return getPairFromList(Server.getCurrent().getFlaggedTransactions());
-    }
-
-    @CrossOrigin()
+    @CrossOrigin
     @RequestMapping(value = "/getlongsize", method = RequestMethod.GET)
     public int getSize(){
-        return 6;
+        return new Random().nextInt(1000);
     }
 
     public static List<StudentLogPair> getPairFromList(List<LogEvent> events){

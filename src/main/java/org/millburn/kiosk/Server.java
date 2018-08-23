@@ -2,9 +2,11 @@ package org.millburn.kiosk;
 
 import org.millburn.kiosk.db.Database;
 import org.millburn.kiosk.exception.InvalidServerStateException;
+import org.millburn.kiosk.http.StudentLogPair;
 import org.millburn.kiosk.logging.Logger;
 import org.millburn.kiosk.util.Divider;
 import org.millburn.kiosk.util.FileUtil;
+import org.millburn.kiosk.websocket.SocketHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -32,21 +34,18 @@ public class Server {
     private State state = State.INITIALIZING;
     private boolean test = false;
 
-    private Map<Long, Transaction> transactions;
+    private SocketHandler handler;
 
     public Server() {
         server = this;
         try {
             loadConfigs("cfg");
-            transactions = new ConcurrentHashMap<>();
-
 
             database = Database.getDatabase(Configuration.get("Address") + "/" + Configuration.get("DatabaseName"),
                     Configuration.get("User"), Configuration.get("Password"));
 
             Executor.every(Period.ofWeeks(1), this::repopulate);
             Executor.every(Period.ofDays(1), this::checkAndClearViolators);
-            Executor.every(Period.ofDays(1), () -> transactions.clear());
 
             //database.query("DELETE FROM kiosk.violations");//database.query("DELETE FROM kiosk.timelogs");
 
@@ -62,6 +61,14 @@ public class Server {
     public static void initialize() {
         Executor.initialize();
         SpringApplication.run(Server.class);
+    }
+
+    public SocketHandler setSocketHandler(SocketHandler handler){
+        return this.handler = handler;
+    }
+
+    public SocketHandler getSocketHandler(){
+        return handler;
     }
 
     private static void loadConfigs(String path) throws IOException {
@@ -109,6 +116,12 @@ public class Server {
         return this.getDatabase().query("SELECT * FROM kiosk.`timelogs`WHERE `valid`=0;").getResults().stream()
                 .map(LogEvent::new)
                 .collect(Collectors.toList());
+    }
+
+    public Optional<LogEvent> getTransaction(long id){
+        return this.getDatabase().query("SELECT * FROM kiosk.`timelogs` WHERE `transaction`=" + id + ";").getResults().stream()
+                .map(LogEvent::new)
+                .findFirst();
     }
 
     public long getLatestTransactionFor(int id){
@@ -181,27 +194,27 @@ public class Server {
     }
 
     public Transaction createTransaction(int userid, int kiosk, String name) {
-        var transaction = new Transaction(userid, kiosk, name);
-        this.transactions.put(transaction.getTransactionId(), transaction);
+        var transaction = new Transaction(userid, kiosk);
 
         return transaction;
     }
 
-    public void processTransaction(Transaction transaction) {
+    public void processTransaction(Student student, Transaction transaction) {
 
         this.getDatabase().query("INSERT INTO `kiosk`.`timelogs`(ID,transaction,kiosk) " +
                 "VALUES(" +
                 "" + transaction.getUserId() + "," +
                 "" + transaction.getTransactionId() + "," +
-                "" + transaction.getKiosk() + ");");
+                "" + transaction.getKiosk() + ");").getResults();
+
+
+        getTransaction(transaction.getTransactionId()).ifPresentOrElse(
+                s -> Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, s)),
+                () -> logger.warn("Failed to find recently added transaction!"));
     }
 
     public void setValidated(long transaction, boolean valid){
         this.getDatabase().query("UPDATE kiosk.timelogs SET `valid`=" + (valid ? 1 : 0) + " WHERE `transaction`=" + transaction + ";");
-    }
-
-    public Optional<Transaction> getTransaction(long transid) {
-        return Optional.ofNullable(transactions.get(transid));
     }
 
     public Database getDatabase() {

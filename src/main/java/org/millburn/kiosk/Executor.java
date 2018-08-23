@@ -68,15 +68,14 @@ public class Executor{
     }
 
     public static Sleeper in(TemporalAmount period, Runnable exec){
-        return  at(ZonedDateTime.now().plus(period).toInstant(), exec::run);
+        return at(ZonedDateTime.now().plus(period).toInstant(), exec::run);
+    }
+
+    public static void async(Runnable exec){
+        in(0, exec);
     }
 
     private Sleeper inInternal(long millis, Runnable exec){
-        if(millis <= 0){
-            exec.run();
-            return new UselessSleeper();
-        }
-
         var container = new ExecutorContainer(exec, millis);
         containers.add(container);
         return container.sleeper;
