@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a8c0e8e-c477-4a56-af5a-e67d15560748" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/ResponseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java" afterDir="false" />
+    <list default="true" id="489a6bda-ccae-4c1b-b006-b5412f99f086" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,34 +9,30 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Configuration$ConfigFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Configuration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Server$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Server$State.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/ServerInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/ServerInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/DatabaseConnectionPool$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/DatabaseConnectionPool$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/DatabaseConnectionPool$DatabaseConnectionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/DatabaseConnectionPool$DatabaseConnectionThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/DatabaseConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/DatabaseConnectionPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/SQLResult$Row.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/SQLResult$Row.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/SQLResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/db/SQLResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/millburn/kiosk/tcp/ConnectionReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfg/files.ini" beforeDir="false" afterPath="$PROJECT_DIR$/cfg/files.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -52,104 +44,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/KioskServer$Test.ic" NAME="Test Coverage Results" MODIFIED="1532923737330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KioskServer" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KioskServer" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KioskServer" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KioskServer" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="module-info.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/module-info.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpReceiver.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="HttpReceiver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-              <folding>
-                <element signature="method#login#0;class#HttpReceiver#0" />
-                <element signature="method#isOut#0;class#HttpReceiver#0" />
-                <element signature="method#getAllFlagged#0;class#HttpReceiver#0" />
-                <element signature="method#getRecent#0;class#HttpReceiver#0" />
-                <element signature="method#flag#0;class#HttpReceiver#0" />
-                <element signature="method#getPairFromList#0;class#HttpReceiver#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextWebSocketHandler.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-websocket/5.0.7.RELEASE/42bd80d110525b2c29c9443bbabbd23cb57d90ce/spring-websocket-5.0.7.RELEASE-sources.jar!/org/springframework/web/socket/handler/TextWebSocketHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+            <state relative-caret-position="368">
+              <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -157,58 +63,45 @@
       <file leaf-file-name="DatabaseConnectionPool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="943">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="506">
+              <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java">
+      <file leaf-file-name="Executor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="782">
+              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogEvent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1012">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3933">
+              <caret line="191" selection-start-line="191" selection-end-line="191" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Empty Mind Map" />
-        <option value="Interface" />
-        <option value="module-info" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>return set.get</find>
-      <find>columnIndex</find>
-      <find>(columnIndex</find>
-      <find>&lt;{</find>
-      <find>`</find>
-      <find>now</find>
-      <find>tried</find>
-      <find>stream</find>
-      <find>violators</find>
-      <find>DELETE</find>
-      <find>checkAnd</find>
-      <find>source</find>
-      <find>modul</find>
-      <find>UP</find>
-      <find>CrossOrigin()</find>
+      <find>users</find>
     </findStrings>
-    <replaceStrings>
-      <replace>set.absolute(id + 1); return set.get</replace>
-      <replace>columnIndex + 1</replace>
-      <replace>(columnIndex + 1</replace>
-      <replace>\&quot;</replace>
-      <replace>CrossOrigin</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -216,12 +109,12 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\javst\.gradle\wrapper\dists\gradle-4.8-all\41c9mvq2w0645xx6nsenaerjl\gradle-4.8" />
+        <entry key="$PROJECT_DIR$" value="C:\ProgramData\chocolatey\lib\gradle\tools\gradle-4.8.1" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.8" />
+        <entry key="$PROJECT_DIR$" value="4.8.1" />
       </map>
     </option>
     <option name="availableProjects">
@@ -461,10 +354,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6131931986728" />
+        <entry key="$PROJECT_DIR$" value="4595607910862" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2347948842" />
-        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2585518924" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="3336458887" />
       </map>
     </option>
@@ -497,153 +389,83 @@
               <option name="name" value="KioskServer" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/announce" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/antlr" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/base-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/base-services-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/build-cache" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/build-cache-http" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/build-comparison" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/build-init" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/build-option" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/cli" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/code-quality" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/composite-builds" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/core" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/core-api" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/dependency-management" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/diagnostics" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/ear" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/ide" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/ide-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/ide-play" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/installation-beacon" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/internal-android-performance-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/internal-integ-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/internal-performance-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/internal-testing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/ivy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/jacoco" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/javascript" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/jvm-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/language-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/language-java" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/language-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/language-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/language-scala" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/launcher" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/logging" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/maven" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/messaging" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/model-core" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/model-groovy" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/osgi" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/persistent-cache" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/platform-base" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/platform-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/platform-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/platform-play" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/plugin-development" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/plugin-use" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/plugins" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/process-services" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/publish" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/reporting" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/resources" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/resources-gcs" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/resources-http" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/resources-s3" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/resources-sftp" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/scala" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/signing" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/test-kit" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/testing-base" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/testing-junit-platform" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/testing-jvm" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/testing-native" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/tooling-api" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/tooling-api-builders" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/version-control" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/workers" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/src/wrapper" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/ant-1.9.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/ant-launcher-1.9.11.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-base-services-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-base-services-groovy-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-build-cache-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-build-option-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-cli-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-core-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-core-api-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-docs-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-installation-beacon-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-jvm-services-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-kotlin-dsl-0.17.5.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-launcher-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-logging-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-messaging-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-model-core-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-model-groovy-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-native-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-persistent-cache-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-process-services-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-resources-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-runtime-api-info-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-tooling-api-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/gradle-wrapper-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/groovy-all-2.4.12.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-announce-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-antlr-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-build-cache-http-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-build-comparison-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-build-init-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-code-quality-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-composite-builds-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-dependency-management-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-diagnostics-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-ear-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-ide-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-ide-native-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-ide-play-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-ivy-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-jacoco-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-javascript-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-language-groovy-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-language-java-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-language-jvm-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-language-native-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-language-scala-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-maven-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-osgi-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-platform-base-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-platform-jvm-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-platform-native-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-platform-play-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-plugin-development-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-plugin-use-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-plugins-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-publish-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-reporting-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-resources-gcs-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-resources-http-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-resources-s3-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-resources-sftp-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-scala-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-signing-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-test-kit-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-testing-base-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-testing-junit-platform-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-testing-jvm-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-testing-native-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-tooling-api-builders-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-version-control-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/gradle-workers-4.8.jar" />
-                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-all/41c9mvq2w0645xx6nsenaerjl/gradle-4.8/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/ant-1.9.11.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/ant-launcher-1.9.11.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-base-services-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-base-services-groovy-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-build-cache-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-build-option-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-cli-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-core-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-core-api-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-docs-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-installation-beacon-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-jvm-services-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-kotlin-dsl-0.17.5.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-launcher-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-logging-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-messaging-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-model-core-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-model-groovy-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-native-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-persistent-cache-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-process-services-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-resources-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-runtime-api-info-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-tooling-api-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/gradle-wrapper-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/groovy-all-2.4.12.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-announce-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-antlr-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-build-cache-http-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-build-comparison-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-build-init-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-code-quality-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-composite-builds-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-dependency-management-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-diagnostics-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-ear-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-ide-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-ide-native-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-ide-play-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-ivy-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-jacoco-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-javascript-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-language-groovy-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-language-java-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-language-jvm-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-language-native-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-language-scala-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-maven-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-osgi-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-platform-base-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-platform-jvm-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-platform-native-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-platform-play-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-plugin-development-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-plugin-use-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-plugins-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-publish-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-reporting-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-resources-gcs-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-resources-http-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-resources-s3-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-resources-sftp-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-scala-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-signing-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-test-kit-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-testing-base-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-testing-junit-platform-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-testing-jvm-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-testing-native-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-tooling-api-builders-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-version-control-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/gradle-workers-4.8.1.jar" />
+                  <option value="C:/ProgramData/chocolatey/lib/gradle/tools/gradle-4.8.1/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -655,184 +477,70 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$/../KioskServer" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../NetBeansProjects/WorldEditor/WorldEditor" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/SQLFuture.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/MessageContainer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGInputStream.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLFuture.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLProcedureResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/Tuple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/ProductionDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/impl/TestDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Connection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/logging/LoggingHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/SerializeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/GGOutputStream.java" />
-        <option value="$PROJECT_DIR$/cfg/users.ini" />
-        <option value="$PROJECT_DIR$/cfg/server.ini" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Message.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/Catcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/CheckedRunnable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/Unchecked.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/DividerCollector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/Divider.java" />
-        <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Configuration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/cfg/files.ini" />
-        <option value="$PROJECT_DIR$/cfg/db.ini" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/UserBean.java" />
-        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/StudentLogPair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/module-info.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/ResponseMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1096" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <flattenPackages ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="cfg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiosk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiosk" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiosk" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KioskServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
-        <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="NBKnowledgePane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="http&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/http/HttpReceiver.java&#10;appl&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/resources/application.properties&#10;Http&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/http/HttpReceiver.java&#10;Student&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Student.java&#10;Serv&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Server.java&#10;LogEv&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/LogEvent.java&#10;S&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Server.java&#10;Htt&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/http/HttpReceiver.java&#10;Stude&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Student.java&#10;Ht&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/http/HttpReceiver.java&#10;Stud&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Student.java&#10;Server&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Server.java&#10;KIosk&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java&#10;Ki&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java&#10;Con&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java&#10;Conn&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java&#10;Tabl&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java&#10;COnnect&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java&#10;test&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/test/java/ServerTest.java&#10;Connec&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java&#10;Kio&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java&#10;Tablet&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java&#10;Kiosk&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java&#10;files&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/cfg/files.ini&#10;file&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/cfg/files.ini&#10;Ser&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Server.java&#10;ServerTest&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/test/java/ServerTest.java&#10;Serve&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/test/java/ServerTest.java&#10;ServerT&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/test/java/ServerTest.java&#10;Databas&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java&#10;Connection&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java&#10;Test&#9;FILE&#9;file://C:/Users/javst/Documents/Kiosk/Server/src/test/java/ServerTest.java" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/logs/2018-06-08.log&#10;true" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.millburn.kiosk.websocket" />
-      <recent name="org.millburn.kiosk.exception" />
-      <recent name="org.millburn.kiosk.util" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.millburn.kiosk.tcp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Javier\Documents\Kiosk\KioskServer\src\main\java\org\millburn\kiosk\util" />
-    </key>
+    <property name="SearchEverywhereHistoryKey" value="db.&#9;FILE&#9;file://E:/Users/Javier/Documents/Kiosk/Server/cfg/db.ini&#10;serve&#9;FILE&#9;file://E:/Users/Javier/Documents/Kiosk/Server/src/main/java/org/millburn/kiosk/Server.java&#10;Database&#9;PSI&#9;JAVA://org.millburn.kiosk.db.DatabaseConnectionPool&#10;Stu&#9;PSI&#9;JAVA://org.millburn.kiosk.Student&#10;application.&#9;FILE&#9;file://E:/Users/Javier/Documents/Kiosk/Server/src/main/resources/application.properties&#10;Serv&#9;PSI&#9;JAVA://org.millburn.kiosk.Server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LinkChain/PackageService" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -846,11 +554,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Production">
+  <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Production" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="run" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -862,108 +570,6 @@
         <option name="taskNames">
           <list>
             <option value="bootRun" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="Server [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="Server [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildEnvironment" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="Server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="Server [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="Test" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-    </configuration>
-    <configuration name="jarout" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -1007,305 +613,150 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Twisted Trial">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <list>
-      <item itemvalue="Gradle.Test" />
-      <item itemvalue="Gradle.jarout" />
-      <item itemvalue="Gradle.Production" />
-      <item itemvalue="Gradle.Server [clean]" />
-      <item itemvalue="Gradle.Server [buildEnvironment]" />
-      <item itemvalue="Gradle.Server [build]" />
-      <item itemvalue="Gradle.Server [bootJar]" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.Server [build]" />
-        <item itemvalue="Gradle.Server [bootJar]" />
-        <item itemvalue="Gradle.Server [buildEnvironment]" />
-        <item itemvalue="Gradle.Server [clean]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9a8c0e8e-c477-4a56-af5a-e67d15560748" name="Default" comment="" />
-      <created>1528427840345</created>
+      <changelist id="489a6bda-ccae-4c1b-b006-b5412f99f086" name="Default" comment="" />
+      <created>1535072066751</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1528427840345</updated>
+      <updated>1535072066751</updated>
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Test - 2018.07.29 at 20h 45m 23s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.29 at 20h 48m 47s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.29 at 20h 48m 55s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.29 at 20h 49m 32s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.29 at 23h 59m 54s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.30 at 00h 07m 56s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.30 at 00h 08m 38s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.30 at 00h 09m 37s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.30 at 00h 10m 56s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test - 2018.07.30 at 00h 15m 52s.xml">
-      <configuration name="Test" configurationId="GradleRunConfiguration" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.32848233" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Regex Tester" order="13" weight="0.32952183" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5010661" side_tool="true" weight="0.22869022" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" weight="0.25289574" />
-      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49840087" weight="0.32848233" />
-      <window_info id="Unicode Browser" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49946696" weight="0.32848233" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.32249466" />
-      <window_info anchor="bottom" id="Docker" order="14" weight="0.13834423" />
-      <window_info anchor="bottom" id="JProfiler" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" weight="0.32995737" />
-      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.39952904" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32952183" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="DB Execution Console" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32958803" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="bottom" id="Statistic" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info active="true" id="DB Browser" visible="true" weight="0.18409543" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="bottom" id="Regex Tester" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.2235929" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.15427436" />
+      <window_info anchor="bottom" id="JProfiler" order="0" />
+      <window_info anchor="right" id="Gradle" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.49964157" visible="true" weight="0.3267974" />
-      <window_info id="Learn" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32941177" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Build" order="4" weight="0.3299923" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.3299923" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
-      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.49964157" visible="true" weight="0.3267974" />
-      <window_info id="Designer" order="1" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" weight="0.25381264" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49946696" weight="0.32848233" />
-      <window_info anchor="bottom" id="Docker" order="14" weight="0.13834423" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5010661" side_tool="true" weight="0.22869022" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32941177" />
-      <window_info id="Unicode Browser" order="0" />
-      <window_info anchor="bottom" id="JProfiler" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49840087" weight="0.32848233" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="2" weight="0.32995737" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.31556502" />
-      <window_info id="Learn" order="4" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32952183" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.32848233" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
-      <window_info anchor="bottom" id="Regex Tester" order="13" weight="0.32952183" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.39952904" />
-    </layout-to-restore>
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="4" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/List.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.7.RELEASE/8f92e4f93393dda9c11d4839a10c4aa66941870e/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
+        <state relative-caret-position="4784">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/Catcher.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/Unchecked.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="12949">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/exception/CheckedRunnable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="4393">
+          <caret line="218" column="102" lean-forward="true" selection-start-line="218" selection-start-column="102" selection-end-line="218" selection-end-column="102" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/DividerCollector.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+        <state relative-caret-position="3933">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/stream/Collector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="259" column="43" selection-start-line="259" selection-start-column="43" selection-end-line="259" selection-end-column="43" />
+        <state relative-caret-position="506">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/Period.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="205" column="48" selection-start-line="205" selection-start-column="48" selection-end-line="205" selection-end-column="48" />
+        <state relative-caret-position="437">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/StudentLogPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="138">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/Divider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="874">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.11/c790841f886ed40601887d1dbce55db8687321f4/mysql-connector-java-8.0.11-sources.jar!/com/mysql/cj/jdbc/exceptions/SQLError.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="138">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/security/AccessController.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.7.RELEASE/8f92e4f93393dda9c11d4839a10c4aa66941870e/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="298" column="31" selection-start-line="298" selection-start-column="31" selection-end-line="298" selection-end-column="31" />
+        <state relative-caret-position="4784">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/net/Socket.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="950" column="26" lean-forward="true" selection-start-line="950" selection-start-column="26" selection-end-line="950" selection-end-column="26" />
+        <state relative-caret-position="11339">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/util/FileUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="1564">
+          <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1316,182 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="1099" column="10" selection-start-line="1099" selection-start-column="10" selection-end-line="1099" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="230" column="18" selection-start-line="230" selection-start-column="18" selection-end-line="230" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/db.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/TabletConnection.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/ConnectionReceiver.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/Message.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.0.7.RELEASE/1df04db0df0da0b7113ef663fa7a0c8dfddc7e36/spring-context-5.0.7.RELEASE-sources.jar!/org/springframework/context/annotation/Bean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="218" column="18" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/UserBean.java" />
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlewe.bat" />
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/tcp/KioskConnection.java" />
-    <entry file="file://$PROJECT_DIR$/gradlewe" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-websocket/5.0.7.RELEASE/42bd80d110525b2c29c9443bbabbd23cb57d90ce/spring-websocket-5.0.7.RELEASE-sources.jar!/org/springframework/web/socket/handler/AbstractWebSocketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/ResponseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/StudentLogPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="210" column="71" lean-forward="true" selection-start-line="210" selection-start-column="71" selection-end-line="210" selection-end-column="71" />
-          <folding>
-            <element signature="e#2206#2207#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2297#2298#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-          <folding>
-            <element signature="e#1980#1981#0" expanded="true" />
-            <element signature="e#2007#2008#0" expanded="true" />
-            <element signature="e#2663#2664#0" expanded="true" />
-            <element signature="e#2702#2703#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1499,24 +774,206 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/ServerInitializer.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.31/5ade5e787bcaabb9d088d8e4b22a8edffa43a783/tomcat-embed-core-8.5.31-sources.jar!/org/apache/tomcat/util/net/SocketProcessorBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="713">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.31/5ade5e787bcaabb9d088d8e4b22a8edffa43a783/tomcat-embed-core-8.5.31-sources.jar!/org/apache/tomcat/util/net/NioEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="33741">
+          <caret line="1467" selection-start-line="1467" selection-end-line="1467" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-websocket/5.0.7.RELEASE/42bd80d110525b2c29c9443bbabbd23cb57d90ce/spring-websocket-5.0.7.RELEASE-sources.jar!/org/springframework/web/socket/handler/TextWebSocketHandler.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.31/5ade5e787bcaabb9d088d8e4b22a8edffa43a783/tomcat-embed-core-8.5.31-sources.jar!/org/apache/coyote/AbstractProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18147">
+          <caret line="789" selection-start-line="789" selection-end-line="789" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1403">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.7.RELEASE/8f92e4f93393dda9c11d4839a10c4aa66941870e/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4048">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12949">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3841">
+          <caret line="167" column="50" selection-start-line="167" selection-start-column="50" selection-end-line="167" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1357">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.31/5ade5e787bcaabb9d088d8e4b22a8edffa43a783/tomcat-embed-core-8.5.31-sources.jar!/org/apache/tomcat/util/net/SocketProcessorBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.31/5ade5e787bcaabb9d088d8e4b22a8edffa43a783/tomcat-embed-core-8.5.31-sources.jar!/org/apache/tomcat/util/net/NioEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31832">
+          <caret line="1467" selection-start-line="1467" selection-end-line="1467" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/files.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/temporal/Temporal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/ZoneOffset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13708">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/ZoneId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1108">
+          <caret line="345" column="84" lean-forward="true" selection-start-line="345" selection-start-column="84" selection-end-line="345" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="232" column="32" selection-start-line="232" selection-start-column="32" selection-end-line="232" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.31/5ade5e787bcaabb9d088d8e4b22a8edffa43a783/tomcat-embed-core-8.5.31-sources.jar!/org/apache/coyote/AbstractProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="789" selection-start-line="789" selection-end-line="789" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.7.RELEASE/8f92e4f93393dda9c11d4839a10c4aa66941870e/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-websocket/5.0.7.RELEASE/42bd80d110525b2c29c9443bbabbd23cb57d90ce/spring-websocket-5.0.7.RELEASE-sources.jar!/org/springframework/web/socket/config/annotation/WebSocketHandlerRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/time/Instant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="1327" column="18" selection-start-line="1327" selection-start-column="18" selection-end-line="1327" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/WebSocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.0.7.RELEASE/8f92e4f93393dda9c11d4839a10c4aa66941870e/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4048">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/SQLResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3933">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/StudentLogPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11339">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1527,126 +984,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/websocket/SocketHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Executor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/module-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="782">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/http/HttpReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding>
-            <element signature="method#login#0;class#HttpReceiver#0" />
-            <element signature="method#isOut#0;class#HttpReceiver#0" />
-            <element signature="method#getAllFlagged#0;class#HttpReceiver#0" />
-            <element signature="method#getRecent#0;class#HttpReceiver#0" />
-            <element signature="method#flag#0;class#HttpReceiver#0" />
-            <element signature="method#getPairFromList#0;class#HttpReceiver#0" />
-          </folding>
+        <state relative-caret-position="368">
+          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/db/DatabaseConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/db.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/millburn/kiosk/LogEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lwjgl</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>JDK 10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>KioskServer</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Gradle: com.google.code.findbugs:jsr305:1.3.9</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1657,15 +1042,5 @@
         </settings>
       </state>
     </states>
-  </component>
-  <component name="regexState">
-    <option name="map">
-      <map>
-        <entry key="flags" value="0" />
-        <entry key="mode" value="0" />
-        <entry key="regex" value="(19||20)\d\d([- /.])(0[1-9]||1[012])\2(0[1-9]||[12][0-9]||3[01])" />
-        <entry key="text" value="1900-01-01 2007/08/13 1900.01.01 1900 01 01 1900-01.01 1900 13 01 1900 02 31" />
-      </map>
-    </option>
   </component>
 </project>

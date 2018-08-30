@@ -7,6 +7,8 @@ import org.millburn.kiosk.Student;
 import org.millburn.kiosk.logging.Logger;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.*;
+import java.time.temporal.TemporalAccessor;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,23 +19,15 @@ public class HttpReceiver {
     @CrossOrigin()
     @RequestMapping(value = "/kiosk/login", method = RequestMethod.GET)
     public Student login(@RequestParam(value = "id") int userid, @RequestParam(value = "kiosk") int kiosk) {
-        var maybestudent = Server.getCurrent().getStudent(userid);
-        maybestudent.ifPresentOrElse(s -> {
-            if(!s.isSeniorPriv()){
-                log.debug("Kiosk requested ID " + userid + ", found student " + s.getName() + " but they lack privilege");
-                return;
-            }
-
-            var transaction = Server.getCurrent().createTransaction(userid, kiosk, s.getName());
-
-            log.debug("Kiosk requested ID " + userid + ", found student " + s.getName());
-
-            Executor.async(() -> Server.getCurrent().processTransaction(s, transaction));
-        }, () ->
-            log.debug("Kiosk requested ID " + userid + ", no student found")
+        Server.getCurrent().getStudent(userid).ifPresentOrElse(s ->
+            Server.getCurrent().processTransaction(s,
+                    Server.getCurrent().createTransaction(userid, kiosk, s.isSeniorPriv())),
+        () ->
+            Server.getCurrent().processTransaction(Student.nonexistent,
+                    Server.getCurrent().createTransaction(userid, kiosk, false))
         );
 
-        return maybestudent.get();
+        return Server.getCurrent().getStudent(userid).orElse(Student.nonexistent);
     }
 
     @CrossOrigin()
@@ -71,8 +65,74 @@ public class HttpReceiver {
 
     @CrossOrigin
     @RequestMapping(value = "/transactions", method = RequestMethod.GET)
-    public List<LogEvent> getAllTransactions(){
-        return Server.getCurrent().getAllTransactions();
+    public List<LogEvent> getAllTransactions(@RequestParam(value = "id", defaultValue = "-1") String id,
+                                             @RequestParam(value = "name", defaultValue = "") String name,
+                                             @RequestParam(value = "start", defaultValue = "2000-05-01T01:00:00Z") String start,
+                                             @RequestParam(value = "end", defaultValue = "2145-01-01T01:00:00Z") String end,
+                                             @RequestParam(value = "valid", defaultValue = "") String valid,
+                                             @RequestParam(value = "violations", defaultValue = "false") String violations,
+                                             @RequestParam(value = "kiosks", defaultValue = "1,2,3,4,5,6") String kiosks){
+
+        InstantContainer startinstant = new InstantContainer();
+        InstantContainer endinstant = new InstantContainer();
+
+        try{
+            startinstant.instant = LocalDateTime.parse(start).atZone(ZoneId.of("America/New_York")).toInstant();
+        }catch (DateTimeException ee){
+            try {
+                startinstant.instant = ZonedDateTime.parse(start).toInstant();
+            }catch (DateTimeException e){
+                startinstant.instant = OffsetDateTime.parse(start).toInstant();
+            }
+        }
+
+        try{
+            endinstant.instant = LocalDateTime.parse(end).atZone(ZoneId.of("America/New_York")).toInstant();
+        }catch (DateTimeException ee){
+            try {
+                endinstant.instant = ZonedDateTime.parse(end).toInstant();
+            }catch (DateTimeException e){
+                endinstant.instant = OffsetDateTime.parse(end).toInstant();
+            }
+        }
+
+        boolean validbool = Boolean.parseBoolean(valid);
+        boolean violationsbool = Boolean.parseBoolean(violations);
+        if(!name.isEmpty()){
+            Map<String, String> names = Server.getCurrent()
+                                            .getAllStudents()
+                                            .stream()
+                                            .collect(Collectors.toMap(student -> student.getName(), student -> student.getId()));
+
+            if(!names.containsKey(name)) return new ArrayList<LogEvent>();
+            else id = names.get(name);
+
+        }
+
+        String studentid = id;
+        
+        List<LogEvent> source;
+
+        if(violations.equals("true"))
+            source = Server.getCurrent().getAllViolations();
+        else
+            source = Server.getCurrent().getAllTransactions();
+
+        return source
+                .stream()
+                .filter(s -> s.getId() == Integer.parseInt(studentid) || studentid.equals("-1"))
+                .filter(s -> kiosks.contains(Integer.toString(s.getKiosk())))
+                .filter(s -> s.getDate().isAfter(startinstant.instant))
+                .filter(s -> s.getDate().isBefore(endinstant.instant))
+                .filter(s -> valid.isEmpty() || s.isValid() == validbool)
+                .collect(Collectors.toList());
+
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "/transactions/violations", method = RequestMethod.GET)
+    public List<LogEvent> getViolations(){
+        return Server.getCurrent().getAllViolations();
     }
 
     @CrossOrigin
@@ -90,12 +150,12 @@ public class HttpReceiver {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/tablet/flag", method = RequestMethod.POST)
-    public int flag(@RequestParam("id") int id, @RequestParam("flagged") int flagged){
+    @RequestMapping(value = "/tablet/flag", method = RequestMethod.GET)
+    public int flag(@RequestParam("id") long id, @RequestParam("flagged") int flagged){
         if(flagged > 0)
-            Server.getCurrent().setValidated(Server.getCurrent().getLatestTransactionFor(id), true);
+            Server.getCurrent().setValidated(id, true);
         else
-            Server.getCurrent().setValidated(Server.getCurrent().getLatestTransactionFor(id), false);
+            Server.getCurrent().setValidated(id, false);
 
         return 1;
     }
@@ -114,5 +174,9 @@ public class HttpReceiver {
                         .map(Student::new)
                         .findFirst().get(), v))
                 .collect(Collectors.toList());
+    }
+
+    class InstantContainer{
+        public Instant instant;
     }
 }

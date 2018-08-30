@@ -6,11 +6,18 @@ import java.sql.SQLException;
 
 public class Student {
 
+    public static Student nonexistent;
+
+    static{
+        nonexistent = new Student(" ,Nonexistent,error.jpg,-1,-1,false");
+    }
+
     String name;
     String path;
     String grade;
     String id;
     boolean seniorPriv;
+    boolean isIn;
 
     public Student(String val) {
         String[] vals = val.split(",");
@@ -22,6 +29,7 @@ public class Student {
         grade = vals[3];
         id = vals[4];
         seniorPriv = Boolean.parseBoolean(vals[5]);
+        isIn = true;
     }
 
     public Student(SQLResult.Row row) {
@@ -31,6 +39,7 @@ public class Student {
             grade = row.getString("grade");
             id = row.getString("ID");
             seniorPriv = row.getBoolean("seniorPriv");
+            isIn = row.getBoolean("isIn");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -61,5 +70,9 @@ public class Student {
 
     public boolean isSeniorPriv() {
         return seniorPriv;
+    }
+
+    public boolean isIn() {
+        return isIn;
     }
 }

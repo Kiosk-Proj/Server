@@ -8,5 +8,6 @@ module org.millburn.kiosk {
     requires spring.context;
     requires spring.websocket;
     requires com.fasterxml.jackson.databind;
+    requires com.fasterxml.jackson.datatype.jsr310;
 
 }

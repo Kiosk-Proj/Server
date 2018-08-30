@@ -127,6 +127,7 @@ public class DatabaseConnectionPool{
             Properties properties = new Properties();
             properties.put("user", creds.getUsername());
             properties.put("password", creds.getSinglePassword());
+            properties.put("autoreconnect", "true");
             //properties.put("useSSL", "false");
             try(Connection connection =
                         DriverManager.getConnection(address, properties)){

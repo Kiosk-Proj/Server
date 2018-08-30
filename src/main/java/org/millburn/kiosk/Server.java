@@ -47,8 +47,6 @@ public class Server {
             Executor.every(Period.ofWeeks(1), this::repopulate);
             Executor.every(Period.ofDays(1), this::checkAndClearViolators);
 
-            //database.query("DELETE FROM kiosk.violations");//database.query("DELETE FROM kiosk.timelogs");
-
             Transaction.currentId = database.requestQuery("SELECT * FROM timelogs").getRows().size();
 
 
@@ -95,6 +93,12 @@ public class Server {
 
     public List<LogEvent> getAllTransactions(){
         return this.getDatabase().query("SELECT * FROM `timelogs`;").getResults().stream()
+                .map(LogEvent::new)
+                .collect(Collectors.toList());
+    }
+
+    public List<LogEvent> getAllViolations(){
+        return this.getDatabase().query("SELECT * FROM `timelogs` INNER JOIN `violations` ON `timelogs`.transaction = `violations`.transaction;").getResults().stream()
                 .map(LogEvent::new)
                 .collect(Collectors.toList());
     }
@@ -169,6 +173,8 @@ public class Server {
             if(checksum.equals(Configuration.get("LastChecksum")))
                 return;
 
+            logger.info("Found change in flat file, uploading new users to database");
+
             Configuration.set("LastChecksum", checksum);
 
             Thread.sleep(1000);
@@ -193,24 +199,31 @@ public class Server {
         Server.getCurrent().getDatabase().query("UPDATE kiosk.allstudents SET `isIn`=1;");
     }
 
-    public Transaction createTransaction(int userid, int kiosk, String name) {
-        var transaction = new Transaction(userid, kiosk);
+    public Transaction createTransaction(int userid, int kiosk, boolean valid) {
+        var transaction = new Transaction(userid, kiosk, valid);
 
         return transaction;
     }
 
     public void processTransaction(Student student, Transaction transaction) {
+        if(transaction.isValid()){
+            var request = this.getDatabase().query("INSERT INTO `kiosk`.`timelogs`(ID,transaction,kiosk) " +
+                    "VALUES(" +
+                    "" + transaction.getUserId() + "," +
+                    "" + transaction.getTransactionId() + "," +
+                    "" + transaction.getKiosk() + ");");
 
-        this.getDatabase().query("INSERT INTO `kiosk`.`timelogs`(ID,transaction,kiosk) " +
-                "VALUES(" +
-                "" + transaction.getUserId() + "," +
-                "" + transaction.getTransactionId() + "," +
-                "" + transaction.getKiosk() + ");").getResults();
+            this.getDatabase().query("UPDATE kiosk.allstudents " +
+                    "SET `isIn`=" + (Server.getCurrent().getStudentsOut().stream().anyMatch(log -> log.getId() == transaction.getUserId()) ? 0 : 1)
+                    + " WHERE `ID`=" + transaction.getUserId() + ";").getResults();
 
-
-        getTransaction(transaction.getTransactionId()).ifPresentOrElse(
-                s -> Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, s)),
-                () -> logger.warn("Failed to find recently added transaction!"));
+            request.getResults();
+            Executor.async(() -> getTransaction(transaction.getTransactionId()).ifPresentOrElse(
+                    log -> Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(getStudent(transaction.getUserId()).get(), log)),
+                    () -> logger.warn("Failed to find recently added transaction!")));
+        }else{
+            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, transaction.getKiosk())));
+        }
     }
 
     public void setValidated(long transaction, boolean valid){

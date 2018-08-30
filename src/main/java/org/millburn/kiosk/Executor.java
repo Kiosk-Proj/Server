@@ -39,7 +39,7 @@ public class Executor{
     }
 
     public void update(int time){
-        var tlist = containers.stream()
+        var tlist = List.copyOf(containers).stream()
                 .peek(c -> c.time -= time)
                 .filter(ExecutorContainer::isComplete)
                 .collect(Collectors.toList());

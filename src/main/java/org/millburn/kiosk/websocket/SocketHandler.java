@@ -1,6 +1,7 @@
 package org.millburn.kiosk.websocket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import org.millburn.kiosk.http.StudentLogPair;
 import org.springframework.stereotype.Component;
@@ -21,7 +22,7 @@ public class SocketHandler extends TextWebSocketHandler {
     public void sendLogin(StudentLogPair pair){
         for(WebSocketSession session : sessions) {
             try {
-                session.sendMessage(new TextMessage(new ObjectMapper().writeValueAsString(pair)));
+                session.sendMessage(new TextMessage(new ObjectMapper().registerModule(new JavaTimeModule()).writeValueAsString(pair)));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -32,7 +33,7 @@ public class SocketHandler extends TextWebSocketHandler {
     public void handleTextMessage(WebSocketSession session, TextMessage message)
             throws InterruptedException, IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        ResponseMessage emp = objectMapper.readValue(message.getPayload(), ResponseMessage.class);
+        ResponseMessage emp = objectMapper.registerModule(new JavaTimeModule()).readValue(message.getPayload(), ResponseMessage.class);
 
 
     }
