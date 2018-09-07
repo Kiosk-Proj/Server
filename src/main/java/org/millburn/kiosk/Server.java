@@ -1,6 +1,8 @@
 package org.millburn.kiosk;
 
 import org.millburn.kiosk.db.Database;
+import org.millburn.kiosk.db.SQLFuture;
+import org.millburn.kiosk.db.SQLResult;
 import org.millburn.kiosk.exception.InvalidServerStateException;
 import org.millburn.kiosk.http.StudentLogPair;
 import org.millburn.kiosk.logging.Logger;
@@ -205,14 +207,17 @@ public class Server {
         return transaction;
     }
 
-    public void processTransaction(Student student, Transaction transaction) {
-        if(transaction.isValid()){
-            var request = this.getDatabase().query("INSERT INTO `kiosk`.`timelogs`(ID,transaction,kiosk) " +
+    public void processTransaction(Student student, Transaction transaction, boolean dolog) {
+        SQLFuture<SQLResult> request = null;
+        if(dolog) {
+            request = this.getDatabase().query("INSERT INTO `kiosk`.`timelogs`(ID,transaction,kiosk) " +
                     "VALUES(" +
                     "" + transaction.getUserId() + "," +
                     "" + transaction.getTransactionId() + "," +
                     "" + transaction.getKiosk() + ");");
+        }
 
+        if(transaction.isValid()){
             this.getDatabase().query("UPDATE kiosk.allstudents " +
                     "SET `isIn`=" + (Server.getCurrent().getStudentsOut().stream().anyMatch(log -> log.getId() == transaction.getUserId()) ? 0 : 1)
                     + " WHERE `ID`=" + transaction.getUserId() + ";").getResults();

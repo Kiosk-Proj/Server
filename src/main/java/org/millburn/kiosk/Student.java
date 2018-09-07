@@ -32,6 +32,10 @@ public class Student {
         isIn = true;
     }
 
+    public static Student getNonexistent(int id){
+        return new Student(" ,Nonexistent,error.jpg,-1,"+id+",false");
+    }
+
     public Student(SQLResult.Row row) {
         try {
             name = row.getString("personname");

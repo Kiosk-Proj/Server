@@ -18,16 +18,17 @@ public class HttpReceiver {
 
     @CrossOrigin()
     @RequestMapping(value = "/kiosk/login", method = RequestMethod.GET)
-    public Student login(@RequestParam(value = "id") int userid, @RequestParam(value = "kiosk") int kiosk) {
-        Server.getCurrent().getStudent(userid).ifPresentOrElse(s ->
+    public Student login(@RequestParam(value = "id") int id, @RequestParam(value = "kiosk") int kiosk) {
+        log.debug("Received ID " + id);
+        Server.getCurrent().getStudent(id).ifPresentOrElse(s ->
             Server.getCurrent().processTransaction(s,
-                    Server.getCurrent().createTransaction(userid, kiosk, s.isSeniorPriv())),
+                    Server.getCurrent().createTransaction(id, kiosk, s.isSeniorPriv()), true),
         () ->
-            Server.getCurrent().processTransaction(Student.nonexistent,
-                    Server.getCurrent().createTransaction(userid, kiosk, false))
+            Server.getCurrent().processTransaction(Student.getNonexistent(id),
+                    Server.getCurrent().createTransaction(id, kiosk, false), false)
         );
 
-        return Server.getCurrent().getStudent(userid).orElse(Student.nonexistent);
+        return Server.getCurrent().getStudent(id).orElse(Student.nonexistent);
     }
 
     @CrossOrigin()
@@ -73,58 +74,51 @@ public class HttpReceiver {
                                              @RequestParam(value = "violations", defaultValue = "false") String violations,
                                              @RequestParam(value = "kiosks", defaultValue = "1,2,3,4,5,6") String kiosks){
 
-        InstantContainer startinstant = new InstantContainer();
-        InstantContainer endinstant = new InstantContainer();
+        var startinstant = new LambdaContainer<Instant>();
+        var endinstant = new LambdaContainer<Instant>();
 
         try{
-            startinstant.instant = LocalDateTime.parse(start).atZone(ZoneId.of("America/New_York")).toInstant();
+            startinstant.val = LocalDateTime.parse(start).atZone(ZoneId.of("America/New_York")).toInstant();
         }catch (DateTimeException ee){
             try {
-                startinstant.instant = ZonedDateTime.parse(start).toInstant();
+                startinstant.val = ZonedDateTime.parse(start).toInstant();
             }catch (DateTimeException e){
-                startinstant.instant = OffsetDateTime.parse(start).toInstant();
+                startinstant.val = OffsetDateTime.parse(start).toInstant();
             }
         }
 
         try{
-            endinstant.instant = LocalDateTime.parse(end).atZone(ZoneId.of("America/New_York")).toInstant();
+            endinstant.val = LocalDateTime.parse(end).atZone(ZoneId.of("America/New_York")).toInstant();
         }catch (DateTimeException ee){
             try {
-                endinstant.instant = ZonedDateTime.parse(end).toInstant();
+                endinstant.val = ZonedDateTime.parse(end).toInstant();
             }catch (DateTimeException e){
-                endinstant.instant = OffsetDateTime.parse(end).toInstant();
+                endinstant.val = OffsetDateTime.parse(end).toInstant();
             }
         }
 
-        boolean validbool = Boolean.parseBoolean(valid);
-        boolean violationsbool = Boolean.parseBoolean(violations);
-        if(!name.isEmpty()){
-            Map<String, String> names = Server.getCurrent()
-                                            .getAllStudents()
-                                            .stream()
-                                            .collect(Collectors.toMap(student -> student.getName(), student -> student.getId()));
+        var ids = new ArrayList<Integer>();
+        if(!id.equals("-1")) ids.add(Integer.parseInt(id));
 
-            if(!names.containsKey(name)) return new ArrayList<LogEvent>();
-            else id = names.get(name);
+        List<LogEvent> source = violations.equals("true") ?
+                Server.getCurrent().getAllViolations() :
+                Server.getCurrent().getAllTransactions();
 
-        }
-
-        String studentid = id;
-        
-        List<LogEvent> source;
-
-        if(violations.equals("true"))
-            source = Server.getCurrent().getAllViolations();
-        else
-            source = Server.getCurrent().getAllTransactions();
+        Server.getCurrent()
+                .getAllStudents()
+                .stream()
+                .filter(s -> s.getName().equals(name))
+                .map(Student::getId)
+                .map(Integer::parseInt)
+                .forEach(ids::add);
 
         return source
                 .stream()
-                .filter(s -> s.getId() == Integer.parseInt(studentid) || studentid.equals("-1"))
+                .filter(s -> ids.isEmpty() || ids.stream().anyMatch(i -> s.getId() == i))
                 .filter(s -> kiosks.contains(Integer.toString(s.getKiosk())))
-                .filter(s -> s.getDate().isAfter(startinstant.instant))
-                .filter(s -> s.getDate().isBefore(endinstant.instant))
-                .filter(s -> valid.isEmpty() || s.isValid() == validbool)
+                .filter(s -> s.getDate().isAfter(startinstant.val))
+                .filter(s -> s.getDate().isBefore(endinstant.val))
+                .filter(s -> valid.isEmpty() || s.isValid() == Boolean.parseBoolean(valid))
                 .collect(Collectors.toList());
 
     }
@@ -176,7 +170,7 @@ public class HttpReceiver {
                 .collect(Collectors.toList());
     }
 
-    class InstantContainer{
-        public Instant instant;
+    class LambdaContainer<T>{
+        public T val;
     }
 }
