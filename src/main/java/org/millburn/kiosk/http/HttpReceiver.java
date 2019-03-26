@@ -71,7 +71,8 @@ public class HttpReceiver {
                                              @RequestParam(value = "end", defaultValue = "2145-01-01T01:00:00Z") String end,
                                              @RequestParam(value = "valid", defaultValue = "") String valid,
                                              @RequestParam(value = "violations", defaultValue = "false") String violations,
-                                             @RequestParam(value = "kiosks", defaultValue = "1,2,3,4,5,6") String kiosks){
+                                             @RequestParam(value = "kiosks", defaultValue = "1,2,3,4,5,6") String kiosks,
+                                             @RequestParam(value = "sort", defaultValue = "transaction") String sort){
 
         InstantContainer startinstant = new InstantContainer();
         InstantContainer endinstant = new InstantContainer();
@@ -97,16 +98,19 @@ public class HttpReceiver {
         }
 
         boolean validbool = Boolean.parseBoolean(valid);
-        boolean violationsbool = Boolean.parseBoolean(violations);
+
+        List<Student> students = Server.getCurrent()
+                .getAllStudents();
+
+        Map<String, String> nameToID =  students.stream()
+                .collect(Collectors.toMap(Student::getName, Student::getId));
+
+        Map<String, String> IDToName =  students.stream()
+                .collect(Collectors.toMap(Student::getId, Student::getName));
+
         if(!name.isEmpty()){
-            Map<String, String> names = Server.getCurrent()
-                                            .getAllStudents()
-                                            .stream()
-                                            .collect(Collectors.toMap(student -> student.getName(), student -> student.getId()));
-
-            if(!names.containsKey(name)) return new ArrayList<LogEvent>();
-            else id = names.get(name);
-
+            if(!nameToID.containsKey(name)) return new ArrayList<>();
+            else id = nameToID.get(name);
         }
 
         String studentid = id;
@@ -118,16 +122,34 @@ public class HttpReceiver {
         else
             source = Server.getCurrent().getAllTransactions();
 
-        return source
+        var filteredStream = source
                 .stream()
                 .filter(s -> s.getId() == Integer.parseInt(studentid) || studentid.equals("-1"))
                 .filter(s -> kiosks.contains(Integer.toString(s.getKiosk())))
                 .filter(s -> s.getDate().isAfter(startinstant.instant))
                 .filter(s -> s.getDate().isBefore(endinstant.instant))
-                .filter(s -> valid.isEmpty() || s.isValid() == validbool)
-                .collect(Collectors.toList());
+                .filter(s -> valid.isEmpty() || s.isValid() == validbool);
 
+        List<LogEvent> result;
+
+        switch(sort){
+            case "time":
+                result = filteredStream.sorted(Comparator.comparing(LogEvent::getDate)).collect(Collectors.toList());
+                break;
+            case "id":
+                result = filteredStream.sorted(Comparator.comparing(LogEvent::getId)).collect(Collectors.toList());
+                break;
+            case "name":
+                result = filteredStream.sorted(Comparator.comparingInt(log -> Integer.parseInt(IDToName.get(Integer.toString(log.getId()))))).collect(Collectors.toList());
+                break;
+            default:
+                result = filteredStream.collect(Collectors.toList());
+                break;
+        }
+
+        return result;
     }
+
 
     @CrossOrigin
     @RequestMapping(value = "/transactions/violations", method = RequestMethod.GET)

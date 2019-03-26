@@ -44,12 +44,13 @@ public class Server {
             database = Database.getDatabase(Configuration.get("Address") + "/" + Configuration.get("DatabaseName"),
                     Configuration.get("User"), Configuration.get("Password"));
 
-            Executor.every(Period.ofWeeks(1), this::repopulate);
+            //Executor.every(Period.ofWeeks(1), this::repopulate);
             Executor.every(Period.ofDays(1), this::checkAndClearViolators);
 
-            Transaction.currentId = database.requestQuery("SELECT * FROM timelogs").getRows().size();
-
-
+            Transaction.currentId = getAllTransactions()
+                    .stream()
+                    .mapToInt(t -> (int) t.getTransaction())
+                    .max().orElse(0);
 
         } catch (IOException e) {
             e.printStackTrace();
