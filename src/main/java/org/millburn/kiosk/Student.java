@@ -1,5 +1,6 @@
 package org.millburn.kiosk;
 
+import org.millburn.kiosk.db.SQLFuture;
 import org.millburn.kiosk.db.SQLResult;
 
 import java.sql.SQLException;
@@ -32,6 +33,19 @@ public class Student {
         isIn = true;
     }
 
+    public Student(String name, String path, String grade, String id, boolean seniorPriv) {
+        this.name = name;
+        this.path = path;
+        this.grade = grade;
+        this.id = id;
+        this.seniorPriv = seniorPriv;
+        this.isIn = true;
+    }
+
+    public static Student getNonexistent(int id){
+        return new Student(" ,Nonexistent,error.jpg,-1,"+id+",false");
+    }
+
     public Student(SQLResult.Row row) {
         try {
             name = row.getString("personname");
@@ -46,8 +60,8 @@ public class Student {
 
     }
 
-    public void upload() {
-        Server.getCurrent().getDatabase().query("INSERT INTO `kiosk`.`allstudents`(`ID`,`personname`,`image`,`grade`,`seniorPriv`,`isIn`) " +
+    public SQLFuture<SQLResult> upload() {
+        return Server.getCurrent().getDatabase().query("INSERT INTO `kiosk`.`allstudents`(`ID`,`personname`,`image`,`grade`,`seniorPriv`,`isIn`) " +
                 "VALUES(\"" + id + "\",\"" + name + "\",\"" + path + "\",\"" + grade + "\",\"" + (seniorPriv ? 1 : 0) + "\",\"" + 1 + "\")" +
                 "  ON DUPLICATE KEY UPDATE personname=\"" + name + "\", image=\"" + path + "\", grade=\"" + grade + "\", seniorPriv=\"" + (seniorPriv ? 1 : 0) + "\";");
     }
@@ -74,5 +88,25 @@ public class Student {
 
     public boolean isIn() {
         return isIn;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public void setSeniorPriv(boolean seniorPriv) {
+        this.seniorPriv = seniorPriv;
+    }
+
+    public void setIn(boolean in) {
+        isIn = in;
     }
 }

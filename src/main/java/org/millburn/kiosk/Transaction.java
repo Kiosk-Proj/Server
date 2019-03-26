@@ -1,7 +1,5 @@
 package org.millburn.kiosk;
 
-import java.time.Instant;
-
 public class Transaction{
     public static long currentId = 0;
 

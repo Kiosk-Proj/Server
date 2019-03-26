@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 
 public class ProductionDatabase implements Database{
     Logger logger = new Logger();
-    public static final int AMOUNT = 10;
+    public static final int AMOUNT = 30;
     private String name, user, pw;
     private DatabaseConnectionPool pool;
 
