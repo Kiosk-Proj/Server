@@ -32,6 +32,8 @@ dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-websocket")
+    compile("io.springfox:springfox-swagger2:2.9.2")
+    compile("io.springfox:springfox-swagger-ui:2.9.2")
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
 
     // Use JUnit test framework

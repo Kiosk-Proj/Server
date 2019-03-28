@@ -13,7 +13,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class DatabaseConnectionPool{
     private static class Lock{}
-    private final Lock lock = new Lock();
+    private final Lock lock = new Lock(){};
 
     private List<DBPair> threads;
     private Queue<DatabaseRequest> requests;
@@ -134,7 +134,6 @@ public class DatabaseConnectionPool{
                 while(run){
                     DatabaseRequest request = getNextValue();
                     if(request == null) continue;
-
 
                     if(request.prepared){
                         CallableStatement statement = statements.getOrDefault
