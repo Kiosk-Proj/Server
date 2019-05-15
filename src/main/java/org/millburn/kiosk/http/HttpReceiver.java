@@ -60,6 +60,16 @@ public class HttpReceiver {
                 .filter(log -> log.getId() == id)
                 .findFirst();
     }
+    @CrossOrigin
+    @RequestMapping(value = "/student/delete", method = RequestMethod.GET)
+    public void delete(@RequestParam(value = "id") int id) {
+        log.debug("Deleting Student with ID: " + id);
+        Server.getCurrent().deleteStudent(id);
+
+
+
+
+    }
 
     @CrossOrigin
     @RequestMapping(value = "/transactions", method = RequestMethod.GET)
