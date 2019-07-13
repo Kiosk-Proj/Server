@@ -3,6 +3,7 @@ package org.millburn.kiosk.http;
 import org.millburn.kiosk.Edit;
 import org.millburn.kiosk.Server;
 import org.millburn.kiosk.Student;
+import org.millburn.kiosk.logging.Logger;
 import org.millburn.kiosk.util.Tuple;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,9 @@ import java.util.stream.Collectors;
 
 @RestController
 public class StudentReceiver {
+    Logger log = new Logger();
+
+
     @CrossOrigin()
     @RequestMapping(value = "/students", method = RequestMethod.GET)
     public List<Student> getAllStudents(){
@@ -88,6 +92,21 @@ public class StudentReceiver {
     }
 
 
+    @CrossOrigin
+    @RequestMapping(value = "/student/delete", method = RequestMethod.GET)
+    public void delete(@RequestParam(value = "id") int id) {
+        log.debug("Deleting Student with ID: " + id);
+
+        var student = Server.getCurrent().getStudent(id).orElseThrow(() -> new IllegalArgumentException("No student exists with ID " + id));
+        Server.getCurrent().deleteStudent(id);
+
+        Edit edit = new Edit();
+        edit.setId(id);
+        edit.setField("DELETE");
+        edit.setOldValue(student.getName() + ", " + student.getPath()  + ", " + student.getGrade()  + ", " + student.getId()  + ", " + student.isSeniorPriv());
+        edit.setValue("");
+        edit.upload();
+    }
 
     @CrossOrigin()
     @RequestMapping(value = "/edits", method = RequestMethod.GET)
