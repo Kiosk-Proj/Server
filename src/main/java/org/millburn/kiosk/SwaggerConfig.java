@@ -1,5 +1,5 @@
 package org.millburn.kiosk;
-
+/*
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableSwagger2
+@EnableSwagger2*/
 public class SwaggerConfig {
-    @Bean
+    /*@Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
@@ -20,5 +20,5 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(new ApiInfoBuilder().version("1.0").title("Kiosk REST API").build());
-    }
+    }*/
 }

@@ -2,12 +2,11 @@ package org.millburn.kiosk.db.impl;
 
 import org.millburn.kiosk.db.*;
 import org.millburn.kiosk.logging.Logger;
-
-import java.sql.ResultSet;
+import org.millburn.kiosk.util.Tuple;
 
 public class ProductionDatabase implements Database{
     Logger logger = new Logger();
-    public static final int AMOUNT = 30;
+    public static final int AMOUNT = 40;
     private String name, user, pw;
     private DatabaseConnectionPool pool;
 
@@ -26,15 +25,19 @@ public class ProductionDatabase implements Database{
     }
 
     @Override
-    public SQLFuture query(String query){
+    public SQLFuture<SQLResult> query(String query){
         return pool.query(query);
     }
 
     @Override
-    public SQLProcedureResult runProcedure(String procname, String... args) {
-        return pool.execPrepared(procname, args).getResults();
+    public SQLFuture<SQLResult> requestProcedure(String procname, Tuple<Database.ValueTypes, Object>... args) {
+        return pool.execPrepared(procname, args);
     }
 
+    @Override
+    public SQLResult runProcedure(String procname, Tuple<ValueTypes, Object>... args) {
+        return pool.execPrepared(procname, args).getResults();
+    }
 
     @Override
     public void disconnect(){

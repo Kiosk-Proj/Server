@@ -4,10 +4,7 @@ package org.millburn.kiosk.db;
 import org.millburn.kiosk.logging.Logger;
 import org.millburn.kiosk.util.Tuple;
 
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -68,12 +65,12 @@ public class DatabaseConnectionPool{
         return request.future;
     }
 
-    public SQLFuture<SQLProcedureResult> execPrepared(String statement, String[] args){
+    public SQLFuture<SQLResult> execPrepared(String statement, Tuple<Database.ValueTypes, Object>... args){
         DatabaseRequest request = new DatabaseRequest();
         request.value = statement;
-        request.future = new SQLFuture<SQLProcedureResult>();
+        request.future = new SQLFuture<SQLResult>();
 
-        request.args = args;
+        request.vals = List.of(args);
         request.prepared = true;
 
         requests.add(request);
@@ -105,13 +102,12 @@ public class DatabaseConnectionPool{
     private class DatabaseRequest{
         String value;
         SQLFuture future;
-        String[] args;
         List<Tuple<Database.ValueTypes, Object>> vals;
         boolean prepared = false;
     }
 
     private class DatabaseConnectionThread implements Runnable{
-        private Map<String, CallableStatement> statements = new HashMap<>();
+        private Map<String, PreparedStatement> statements = new HashMap<>();
         private Logger logger = new Logger();
         private volatile boolean run = true;
         private String address;
@@ -136,31 +132,46 @@ public class DatabaseConnectionPool{
                     if(request == null) continue;
 
                     if(request.prepared){
-                        CallableStatement statement = statements.getOrDefault
+                        PreparedStatement statement = statements.getOrDefault
                                 (request.value,
-                                connection.prepareCall(request.value));
+                                connection.prepareStatement(request.value));
 
                         statements.putIfAbsent(request.value, statement);
 
-                        for(int i = 0; i < request.vals.size(); i++){
-                            var argument = request.vals.get(i);
+                        for(int i = 1; i <= request.vals.size(); i++){
+                            var argument = request.vals.get(i-1);
 
                             switch(argument.t){
                                 case INT:
                                     statement.setInt(i, (Integer) argument.t1);
+                                    break;
+                                case LONG:
+                                    statement.setLong(i, (Long) argument.t1);
+                                    break;
                                 case FLOAT:
                                     statement.setFloat(i, (Float) argument.t1);
+                                    break;
                                 case DOUBLE:
                                     statement.setDouble(i, (Double) argument.t1);
+                                    break;
                                 case BYTE:
                                     statement.setByte(i, (Byte) argument.t1);
+                                    break;
                                 case BOOLEAN:
-                                    statement.setInt(i, (Integer) argument.t1);
+                                    statement.setBoolean(i, (Boolean) argument.t1);
+                                    break;
                                 case STRING:
-                                    statement.setInt(i, (Integer) argument.t1);
-
+                                    statement.setString(i, (String) argument.t1);
+                                    break;
                             }
                         }
+
+                        try{
+                            statement.execute();
+                        }catch (SQLException e){
+                            throw new RuntimeException("Error on statement " + request.value, e);
+                        }
+                        request.future.set(new SQLResult(statement.getResultSet()), statement.getUpdateCount());
                     }else{
                         var statement = connection.createStatement();
                         try{
@@ -169,6 +180,7 @@ public class DatabaseConnectionPool{
                             throw new RuntimeException("Error on statement " + request.value, e);
                         }
                         request.future.set(new SQLResult(statement.getResultSet()), statement.getUpdateCount());
+                        statement.getResultSet().close();
                     }
 
                 }

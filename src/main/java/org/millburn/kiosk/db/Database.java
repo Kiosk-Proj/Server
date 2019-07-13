@@ -2,8 +2,7 @@ package org.millburn.kiosk.db;
 
 import org.millburn.kiosk.db.impl.ProductionDatabase;
 import org.millburn.kiosk.logging.Logger;
-
-import java.sql.ResultSet;
+import org.millburn.kiosk.util.Tuple;
 
 public interface Database{
     static Database getDatabase(String url, String name, String password){
@@ -23,11 +22,13 @@ public interface Database{
 
     SQLFuture<SQLResult> query(String query);
 
-    SQLProcedureResult runProcedure(String procname, String... args);
+    SQLFuture<SQLResult> requestProcedure(String procname, Tuple<ValueTypes, Object>... args);
+
+    SQLResult runProcedure(String procname, Tuple<ValueTypes, Object>... args);
 
     void disconnect();
 
     enum ValueTypes{
-        STRING, INT, FLOAT, DOUBLE, BYTE, BOOLEAN;
+        STRING, INT, FLOAT, DOUBLE, BYTE, BOOLEAN, LONG
     }
 }

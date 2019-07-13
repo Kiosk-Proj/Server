@@ -1,13 +1,12 @@
 package org.millburn.kiosk;
 
 import org.millburn.kiosk.db.Database;
-import org.millburn.kiosk.db.SQLFuture;
-import org.millburn.kiosk.db.SQLResult;
 import org.millburn.kiosk.exception.InvalidServerStateException;
 import org.millburn.kiosk.http.StudentLogPair;
 import org.millburn.kiosk.logging.Logger;
 import org.millburn.kiosk.util.Divider;
 import org.millburn.kiosk.util.FileUtil;
+import org.millburn.kiosk.util.Tuple;
 import org.millburn.kiosk.websocket.SocketHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,10 +19,9 @@ import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.time.Instant;
 import java.time.Period;
+import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -42,17 +40,16 @@ public class Server {
         server = this;
         try {
             loadConfigs("cfg");
-/*
             database = Database.getDatabase(Configuration.get("Address") + "/" + Configuration.get("DatabaseName"),
                     Configuration.get("User"), Configuration.get("Password"));
 
             //Executor.every(Period.ofWeeks(1), this::repopulate);
             Executor.every(Period.ofDays(1), this::checkAndClearViolators);
 
-            Transaction.currentId = getAllTransactions()
+            LogEvent.currentId = getAllTransactions()
                     .stream()
-                    .mapToInt(t -> (int) t.getTransaction())
-                    .max().orElse(0);*/
+                    .mapToInt(t -> (int) t.getTransaction() + 1)
+                    .max().orElse(0);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,7 +58,10 @@ public class Server {
 
     public static void initialize() {
         Executor.initialize();
-        SpringApplication.run(Server.class);
+        var app = new SpringApplication(Server.class);
+        app.setDefaultProperties(Collections
+                .singletonMap("server.port", "55622"));
+        app.run();
     }
 
     /**
@@ -121,7 +121,7 @@ public class Server {
      * @return
      */
     public List<LogEvent> getAllTransactions(){
-        return this.getDatabase().query("SELECT * FROM `timelogs`;").getResults().stream()
+        return this.getDatabase().requestProcedure("SELECT * FROM `timelogs`;").getResults().stream()
                 .map(LogEvent::new)
                 .collect(Collectors.toList());
     }
@@ -131,7 +131,7 @@ public class Server {
      * @return
      */
     public List<LogEvent> getAllViolations(){
-        return this.getDatabase().query("SELECT * FROM `timelogs` INNER JOIN `violations` ON `timelogs`.transaction = `violations`.transaction;").getResults().stream()
+        return this.getDatabase().requestProcedure("SELECT * FROM `timelogs` INNER JOIN `violations` ON `timelogs`.transaction = `violations`.transaction;").getResults().stream()
                 .map(LogEvent::new)
                 .collect(Collectors.toList());
     }
@@ -153,9 +153,9 @@ public class Server {
      * @return
      */
     public List<LogEvent> getTransactionsToday(){
-        return this.getDatabase().query("SELECT * FROM kiosk.`timelogs`;").getResults().stream()
+        return this.getDatabase().requestProcedure("SELECT * FROM kiosk.`timelogs` WHERE DATE(timelog) = CURDATE();").getResults()
+                .stream()
                 .map(LogEvent::new)
-                .filter(e -> e.date.plus(Period.ofDays(1)).isAfter(Instant.now()))
                 .collect(Collectors.toList());
     }
 
@@ -164,7 +164,7 @@ public class Server {
      * @return
      */
     public List<LogEvent> getFlaggedTransactions(){
-        return this.getDatabase().query("SELECT * FROM kiosk.`timelogs`WHERE `valid`=0;").getResults().stream()
+        return this.getDatabase().requestProcedure("SELECT * FROM kiosk.`timelogs`WHERE `valid`=0;").getResults().stream()
                 .map(LogEvent::new)
                 .collect(Collectors.toList());
     }
@@ -175,7 +175,7 @@ public class Server {
      * @return Optional of transaction
      */
     public Optional<LogEvent> getTransaction(long id){
-        return this.getDatabase().query("SELECT * FROM kiosk.`timelogs` WHERE `transaction`=" + id + ";").getResults().stream()
+        return this.getDatabase().requestProcedure("SELECT * FROM kiosk.`timelogs` WHERE `transaction`=?;", Tuple.of(Database.ValueTypes.LONG, id)).getResults().stream()
                 .map(LogEvent::new)
                 .findFirst();
     }
@@ -187,7 +187,7 @@ public class Server {
      */
     public long getLatestTransactionFor(int id){
         try {
-            var list = getDatabase().query("SELECT * FROM kiosk.timelogs WHERE `id`=" + id + ";").getResults()
+            var list = getDatabase().requestProcedure("SELECT * FROM kiosk.timelogs WHERE `id`=?;", Tuple.of(Database.ValueTypes.INT, id)).getResults()
                     .stream().collect(Collectors.toList());
             return list.get(list.size()-1).getLong("transaction");
         } catch (SQLException e) {
@@ -201,7 +201,7 @@ public class Server {
      * @return
      */
     public Optional<Student> getStudent(int id){
-        return getDatabase().query("SELECT * FROM kiosk.allstudents WHERE `id`=" + id + ";").getResults()
+        return getDatabase().requestProcedure("SELECT * FROM kiosk.allstudents WHERE id = ? ", Tuple.of(Database.ValueTypes.INT, id)).getResults()
                 .stream()
                 .map(Student::new)
                 .findFirst();
@@ -212,7 +212,7 @@ public class Server {
      * @return
      */
     public List<Student> getAllStudents(){
-        return getDatabase().query("SELECT * FROM kiosk.allstudents").getResults()
+        return getDatabase().requestProcedure("SELECT * FROM kiosk.allstudents").getResults()
                 .getRows()
                 .stream()
                 .map(Student::new)
@@ -225,7 +225,7 @@ public class Server {
      * @return
      */
     public List<Edit> getAllEdits(){
-        return getDatabase().query("SELECT * FROM kiosk.editlog").getResults()
+        return getDatabase().requestProcedure("SELECT * FROM kiosk.editlog").getResults()
                 .getRows()
                 .stream()
                 .map(Edit::new)
@@ -284,21 +284,7 @@ public class Server {
     public void checkAndClearViolators() {
         getStudentsOut().forEach(LogEvent::upload);
 
-        Server.getCurrent().getDatabase().query("UPDATE kiosk.allstudents SET `isIn`=1;");
-    }
-
-    /**
-     * Creates a transaction <br>
-     *     Note, this does not upload it to the database
-     * @param userid
-     * @param kiosk
-     * @param valid
-     * @return
-     */
-    public Transaction createTransaction(int userid, int kiosk, boolean valid) {
-        var transaction = new Transaction(userid, kiosk, valid);
-
-        return transaction;
+        Server.getCurrent().getDatabase().requestProcedure("UPDATE kiosk.allstudents SET `isIn`=1;");
     }
 
     /**
@@ -307,30 +293,30 @@ public class Server {
      *     This includes sending it to the guard view and potentially logging it to the database.
      *     Additionally, if the doLog flag is on, it will block until the transaction is uploaded
      * @param student
-     * @param transaction
+     * @param kiosk
      * @param dolog If the transaction should be logged to the database
      */
-    public void processTransaction(Student student, Transaction transaction, boolean dolog) {
-        SQLFuture<SQLResult> request = null;
+    public void processTransaction(Student student, int kiosk, boolean dolog) {
+        var logEvent = new LogEvent(Integer.parseInt(student.id), LogEvent.currentId++, Instant.now(), kiosk, student.isSeniorPriv());
         if(dolog) {
-            request = this.getDatabase().query("INSERT INTO `kiosk`.`timelogs`(ID,transaction,kiosk) " +
+            this.getDatabase().requestProcedure("INSERT INTO `kiosk`.`timelogs`(transaction,ID,kiosk) " +
                     "VALUES(" +
-                    "" + transaction.getUserId() + "," +
-                    "" + transaction.getTransactionId() + "," +
-                    "" + transaction.getKiosk() + ");");
+                    "?," +
+                    "?," +
+                    "?);",
+                    Tuple.of(Database.ValueTypes.LONG, logEvent.getTransaction()),
+                    Tuple.of(Database.ValueTypes.INT, logEvent.getId()),
+                    Tuple.of(Database.ValueTypes.INT, logEvent.getKiosk()));
         }
 
-        if(transaction.isValid()){
-            this.getDatabase().query("UPDATE kiosk.allstudents " +
-                    "SET `isIn`=" + (Server.getCurrent().getStudentsOut().stream().anyMatch(log -> log.getId() == transaction.getUserId()) ? 0 : 1)
-                    + " WHERE `ID`=" + transaction.getUserId() + ";").getResults();
+        if(logEvent.isValid()){
+            this.getDatabase().requestProcedure("UPDATE kiosk.allstudents SET `isIn`= ? WHERE `ID`= ?;",
+                    Tuple.of(Database.ValueTypes.INT, (student.isIn ? 0 : 1)),
+                    Tuple.of(Database.ValueTypes.INT, logEvent.getId()));
 
-            request.getResults();
-            Executor.async(() -> getTransaction(transaction.getTransactionId()).ifPresentOrElse(
-                    log -> Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(getStudent(transaction.getUserId()).get(), log)),
-                    () -> logger.warn("Failed to find recently added transaction!")));
+            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, logEvent));
         }else{
-            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, transaction.getKiosk())));
+            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, logEvent.getKiosk())));
         }
     }
 

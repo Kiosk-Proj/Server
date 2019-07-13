@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.time.Instant;
 
 public class LogEvent {
+    public static int currentId;
     int id;
     long transaction;
     Instant date;
@@ -17,7 +18,7 @@ public class LogEvent {
         return new LogEvent(Integer.parseInt(student.id), -1, Instant.now(), kiosk, false);
     }
 
-    private LogEvent(int id, long transaction, Instant date, int kiosk, boolean valid) {
+    public LogEvent(int id, long transaction, Instant date, int kiosk, boolean valid) {
         this.id = id;
         this.transaction = transaction;
         this.date = date;

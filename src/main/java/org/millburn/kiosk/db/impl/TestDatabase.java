@@ -2,10 +2,8 @@ package org.millburn.kiosk.db.impl;
 
 import org.millburn.kiosk.db.Database;
 import org.millburn.kiosk.db.SQLFuture;
-import org.millburn.kiosk.db.SQLProcedureResult;
 import org.millburn.kiosk.db.SQLResult;
-
-import java.sql.ResultSet;
+import org.millburn.kiosk.util.Tuple;
 
 public class TestDatabase implements Database{
     private ProductionDatabase db;
@@ -25,8 +23,13 @@ public class TestDatabase implements Database{
     }
 
     @Override
-    public SQLProcedureResult runProcedure(String procname, String... args) {
-        return db.runProcedure(procname, args);
+    public SQLFuture<SQLResult> requestProcedure(String procname, Tuple<ValueTypes, Object>... args) {
+        return null;
+    }
+
+    @Override
+    public SQLResult runProcedure(String procname, Tuple<ValueTypes, Object>... args) {
+        return null;
     }
 
     @Override

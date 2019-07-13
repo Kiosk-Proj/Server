@@ -43,7 +43,7 @@ public class Student {
     }
 
     public static Student getNonexistent(int id){
-        return new Student(" ,Nonexistent,error.jpg,-1,"+id+",false");
+        return new Student("Nonexistent", "error.jpg", "-1", Integer.toString(id), false);
     }
 
     public Student(SQLResult.Row row) {

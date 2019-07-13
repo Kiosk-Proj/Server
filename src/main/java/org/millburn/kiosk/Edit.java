@@ -9,6 +9,7 @@ public class Edit {
     long editId;
     long id;
     String field;
+    String oldValue;
     String value;
 
     public Edit() {
@@ -19,11 +20,11 @@ public class Edit {
             editId = row.getLong("editID");
             id = row.getInt("studentID");
             field = row.getString("field");
+            oldValue = row.getString("oldValue");
             value = row.getString("value");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public long getEditId() {
@@ -50,6 +51,14 @@ public class Edit {
         this.field = field;
     }
 
+    public String oldValue() {
+        return oldValue;
+    }
+
+    public void setOldValue(String oldValue) {
+        this.oldValue = oldValue;
+    }
+
     public String getValue() {
         return value;
     }
@@ -59,7 +68,7 @@ public class Edit {
     }
 
     public SQLFuture<SQLResult> upload(){
-        return Server.getCurrent().getDatabase().query("INSERT INTO `kiosk`.`editlog`(`studentID`,`field`,`value`) " +
-                "VALUES(\"" + id + "\",\"" + field + "\",\"" + value + "\")");
+        return Server.getCurrent().getDatabase().query("INSERT INTO `kiosk`.`editlog`(`studentID`,`field`,`oldValue`,`value`) " +
+                "VALUES(\"" + id + "\",\"" + field + "\",\"" + oldValue + "\",\"" + value + "\")");
     }
 }
