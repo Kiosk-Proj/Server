@@ -207,6 +207,10 @@ public class Server {
                 .findFirst();
     }
 
+    public void deleteStudent(int id){
+        this.getDatabase().query("DELETE FROM kiosk.allstudents WHERE `id`=" + id + ";");
+    }
+
     /**
      * Gets every non-invalidated student
      * @return
