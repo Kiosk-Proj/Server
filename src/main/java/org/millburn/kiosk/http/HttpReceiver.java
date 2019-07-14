@@ -16,13 +16,13 @@ public class HttpReceiver {
 
     @CrossOrigin()
     @RequestMapping(value = "/kiosk/login", method = RequestMethod.GET)
-    public Student login(@RequestParam(value = "id") int id, @RequestParam(value = "kiosk") int kiosk) {
+    public Student login(@RequestParam(value = "id") int id, @RequestParam(value = "kiosk") int kiosk, @RequestParam(value = "isMorning") boolean isMorning) {
         log.debug("Received ID " + id);
         var student = Server.getCurrent().getStudent(id);
         student.ifPresentOrElse(s ->
-            Server.getCurrent().processTransaction(s, kiosk, true),
+            Server.getCurrent().processTransaction(s, kiosk, true, isMorning),
         () ->
-            Server.getCurrent().processTransaction(Student.getNonexistent(id), kiosk, false)
+            Server.getCurrent().processTransaction(Student.getNonexistent(id), kiosk, false, isMorning)
         );
 
         return student.orElse(Student.nonexistent);

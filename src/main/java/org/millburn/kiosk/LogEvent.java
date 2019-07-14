@@ -13,17 +13,19 @@ public class LogEvent {
     Instant date;
     int kiosk;
     boolean valid;
+    boolean isMorning;
 
-    public static LogEvent createFake(Student student, int kiosk){
-        return new LogEvent(Integer.parseInt(student.id), -1, Instant.now(), kiosk, false);
+    public static LogEvent createFake(Student student, int kiosk, boolean isMorning){
+        return new LogEvent(Integer.parseInt(student.id), -1, Instant.now(), kiosk, false, isMorning);
     }
 
-    public LogEvent(int id, long transaction, Instant date, int kiosk, boolean valid) {
+    public LogEvent(int id, long transaction, Instant date, int kiosk, boolean valid, boolean isMorning) {
         this.id = id;
         this.transaction = transaction;
         this.date = date;
         this.kiosk = kiosk;
         this.valid = valid;
+        this.isMorning = isMorning;
     }
 
     public LogEvent(SQLResult.Row row) {
@@ -58,6 +60,8 @@ public class LogEvent {
     public boolean isValid() {
         return valid;
     }
+
+    public boolean isMorning() {return isMorning;}
 
     public void upload() {
         Server.getCurrent().getDatabase().query("INSERT INTO `kiosk`.`violations`(id,transaction) VALUES(" + id + "," + transaction + ");");

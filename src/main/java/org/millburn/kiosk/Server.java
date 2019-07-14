@@ -300,17 +300,19 @@ public class Server {
      * @param kiosk
      * @param dolog If the transaction should be logged to the database
      */
-    public void processTransaction(Student student, int kiosk, boolean dolog) {
-        var logEvent = new LogEvent(Integer.parseInt(student.id), LogEvent.currentId++, Instant.now(), kiosk, student.isSeniorPriv());
+    public void processTransaction(Student student, int kiosk, boolean dolog, boolean isMorning) {
+        var logEvent = new LogEvent(Integer.parseInt(student.id), LogEvent.currentId++, Instant.now(), kiosk, student.isSeniorPriv(), isMorning);
         if(dolog) {
             this.getDatabase().requestProcedure("INSERT INTO `kiosk`.`timelogs`(transaction,ID,kiosk) " +
                     "VALUES(" +
                     "?," +
                     "?," +
+                    "?," +
                     "?);",
                     Tuple.of(Database.ValueTypes.LONG, logEvent.getTransaction()),
                     Tuple.of(Database.ValueTypes.INT, logEvent.getId()),
-                    Tuple.of(Database.ValueTypes.INT, logEvent.getKiosk()));
+                    Tuple.of(Database.ValueTypes.INT, logEvent.getKiosk()),
+                    Tuple.of(Database.ValueTypes.BOOLEAN, logEvent.isMorning()));
         }
 
         if(logEvent.isValid()){
@@ -320,7 +322,7 @@ public class Server {
 
             Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, logEvent));
         }else{
-            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, logEvent.getKiosk())));
+            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, logEvent.getKiosk(), isMorning)));
         }
     }
 
