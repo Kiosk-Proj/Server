@@ -29,6 +29,13 @@ public class HttpReceiver {
     }
 
     @CrossOrigin()
+    @RequestMapping(value = "/kiosk/login", method = RequestMethod.GET)
+    public void latecheckin(@RequestParam(value = "latecheckin") boolean latecheckin) {
+        log.debug("Changing Late Checkin to  " + latecheckin);
+        Server.getCurrent().setLatecheckin(latecheckin);
+    }
+
+    @CrossOrigin()
     @RequestMapping(value = "/students/out", method = RequestMethod.GET)
     public List<StudentLogPair> getStudentsOut(){
         return getPairFromList(Server.getCurrent().getStudentsOut());

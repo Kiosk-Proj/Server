@@ -33,7 +33,7 @@ public class Server {
     private Database database;
     private State state = State.INITIALIZING;
     private boolean test = false;
-
+    private boolean latecheckin;
     private SocketHandler handler;
 
     public Server() {
@@ -290,7 +290,13 @@ public class Server {
 
         Server.getCurrent().getDatabase().requestProcedure("UPDATE kiosk.allstudents SET `isIn`=1;");
     }
+    public boolean isLatecheckin() {
+        return latecheckin;
+    }
 
+    public void setLatecheckin(boolean latecheckin) {
+        this.latecheckin = latecheckin;
+    }
     /**
      * Processes the given transaction for the given student
      * <br>
@@ -312,7 +318,7 @@ public class Server {
                     Tuple.of(Database.ValueTypes.LONG, logEvent.getTransaction()),
                     Tuple.of(Database.ValueTypes.INT, logEvent.getId()),
                     Tuple.of(Database.ValueTypes.INT, logEvent.getKiosk()),
-                    Tuple.of(Database.ValueTypes.BOOLEAN, logEvent.isMorning()));
+                    Tuple.of(Database.ValueTypes.BOOLEAN, Server.getCurrent().isLatecheckin()));
         }
 
         if(logEvent.isValid()){
