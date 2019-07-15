@@ -328,7 +328,7 @@ public class Server {
 
             Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, logEvent));
         }else{
-            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, logEvent.getKiosk(), isMorning)));
+            Server.getCurrent().getSocketHandler().sendLogin(new StudentLogPair(student, LogEvent.createFake(student, logEvent.getKiosk(), Server.getCurrent().isLatecheckin())));
         }
     }
 
