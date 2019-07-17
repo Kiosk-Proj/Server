@@ -29,7 +29,7 @@ public class HttpReceiver {
     }
 
     @CrossOrigin()
-    @RequestMapping(value = "/kiosk/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/setLateCheckin", method = RequestMethod.GET)
     public void latecheckin(@RequestParam(value = "latecheckin") boolean latecheckin) {
         log.debug("Changing Late Checkin to  " + latecheckin);
         Server.getCurrent().setLatecheckin(latecheckin);
